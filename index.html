@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>码流回放</title>
+  <link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.4/themes/default/easyui.css">
+  <link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.4/themes/icon.css">
+  <script type="text/javascript" src="jquery-easyui-1.4.4/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
+</head>
+
+<body>
+  <div class="easyui-layout" fit="true">
+    <div data-options="region:'north',iconCls:'icon-tip'" style="height:70px;">填一些筛选条件之类的</div>
+    <div data-options="region:'west',split:true,iconCls:'icon-tip'" title="基本信息" style="width:200px;">
+      <table id="edit" class="easyui-propertygrid" data-options="
+                showGroup:true,
+                scrollbarSize:0,
+                fit:true
+            ">
+      </table>
+    </div>
+    <div data-options="region:'center'">
+      <div class="easyui-layout" fit="true">
+        <div data-options="region:'center',title:'图',split:true,iconCls:'icon-tip'">
+          <div class="easyui-tabs" fit="true">
+            <div title="图形" style="padding:10px">
+              <p style="font-size:14px">jQuery EasyUI framework helps you build your web pages easily.</p>
+              <ul>
+                <li>easyui is a collection of user-interface plugin based on jQuery.</li>
+                <li>easyui provides essential functionality for building modem, interactive, javascript applications.</li>
+                <li>using easyui you don't need to write many javascript code, you usually defines user-interface by writing some HTML markup.</li>
+                <li>complete framework for HTML5 web page.</li>
+                <li>easyui save your time and scales while developing your products.</li>
+                <li>easyui is very easy but powerful.</li>
+              </ul>
+            </div>
+            <div title="表格" style="padding:10px">
+              <ul class="easyui-tree" data-options="url:'tree_data1.json',method:'get',animate:true"></ul>
+            </div>
+          </div>
+
+
+        </div>
+        <div data-options="region:'south',split:true,iconCls:'icon-tip'" title="二进制信息" style="height:200px;">
+          <div class="easyui-tabs" fit="true">
+            <div title="流程图" style="padding:10px">
+              <p style="font-size:14px">jQuery EasyUI framework helps you build your web pages easily.</p>
+              <ul>
+                <li>easyui is a collection of user-interface plugin based on jQuery.</li>
+                <li>easyui provides essential functionality for building modem, interactive, javascript applications.</li>
+                <li>using easyui you don't need to write many javascript code, you usually defines user-interface by writing some HTML markup.</li>
+                <li>complete framework for HTML5 web page.</li>
+                <li>easyui save your time and scales while developing your products.</li>
+                <li>easyui is very easy but powerful.</li>
+              </ul>
+            </div>
+            <div title="统计图" style="padding:10px">
+              <ul class="easyui-tree" data-options="url:'tree_data1.json',method:'get',animate:true"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    $(function() {
+      // body...
+      var rows = [{
+        "name": "姓名",
+        "group": "帐号",
+        "value": ""
+      }, {
+        "name": "帐号",
+        "group": "帐号",
+        "value": "",
+        "field": "id"
+      }, {
+        "name": "职位",
+        "value": "",
+        "group": "其它",
+        "field": "Role",
+        "editor": {
+          "type": 'combobox',
+          "options": {
+            "valueField": 'value',
+            "textField": 'name',
+            "url": '../../home/GetSelectItems_Role',
+            "required": true
+          }
+        }
+      }, {
+        "name": "办公电话",
+        "value": "",
+        "group": "其它",
+        "field": "officePhone",
+        "editor": "text"
+      }, {
+        "name": "移动电话",
+        "group": "其它",
+        "value": "",
+        "field": "mobilePhone",
+        "editor": {
+          "type": 'validatebox',
+          "options": {
+            "required": true
+          }
+        }
+      }, {
+        "name": "集团短号",
+        "group": "其它",
+        "editor": "text",
+        "value": "",
+        "field": "mobilePhoneShort"
+      }, {
+        "name": "第二联系方式",
+        "group": "其它",
+        "value": "",
+        "field": "phoneSecond",
+        "editor": {
+          "type": 'validatebox',
+          "options": {
+            "required": true
+          }
+        }
+      }, {
+        "name": "备注",
+        "group": "其它",
+        "editor": "text",
+        "value": "",
+        "field": "remark"
+      }];
+
+
+      $('#edit').propertygrid({
+
+        width: 298,
+        height: 'auto',
+        showGroup: true,
+        scrollbarSize: 0,
+        columns: [
+          [{
+            field: 'name',
+            title: 'Name',
+            width: 100,
+            resizable: true
+          }, {
+            field: 'value',
+            title: 'Value',
+            width: 100,
+            resizable: false
+          }]
+        ]
+      });
+      $('#edit').propertygrid('loadData', rows);
+    })
+  </script>
+</body>
+
+</html>
