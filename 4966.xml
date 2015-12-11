@@ -1,0 +1,999 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="pdml2html.xsl"?>
+<!-- You can find pdml2html.xsl in /usr/share/wireshark or at http://anonsvn.wireshark.org/trunk/wireshark/pdml2html.xsl. -->
+<pdml version="0" creator="wireshark/1.10.11" time="Fri Dec 11 11:26:25 2015" capture_file="/mnt/raid5/omatrixWeb/playback/1242/4966.pcap">
+<packet id="1">
+<brief time="2015-07-03 09:25:46.165145" src="221.177.175.12" dst="221.177.175.9" protocol="GTPv2" length="335" info="Create Session Request " />
+  <proto name="frame" showname="Frame 1: 335 bytes on wire (2680 bits), 335 bytes captured (2680 bits)" size="335" pos="0">
+    <field name="frame.encap_type" showname="Encapsulation type: Ethernet (1)" size="0" pos="0"/>
+    <field name="frame.time" showname="Arrival Time: Jul  3, 2015 09:25:46.165145000 CST" size="0" pos="0"/>
+    <field name="frame.offset_shift" showname="Time shift for this packet: 0.000000000 seconds" size="0" pos="0"/>
+    <field name="frame.time_epoch" showname="Epoch Time: 1435886746.165145000 seconds" size="0" pos="0"/>
+    <field name="frame.time_delta" showname="Time delta from previous captured frame: 0.000000000 seconds" size="0" pos="0"/>
+    <field name="frame.time_delta_displayed" showname="Time delta from previous displayed frame: 0.000000000 seconds" size="0" pos="0"/>
+    <field name="frame.time_relative" showname="Time since reference or first frame: 0.000000000 seconds" size="0" pos="0"/>
+    <field name="frame.number" showname="Frame Number: 1" size="0" pos="0"/>
+    <field name="frame.len" showname="Frame Length: 335 bytes (2680 bits)" size="0" pos="0"/>
+    <field name="frame.cap_len" showname="Capture Length: 335 bytes (2680 bits)" size="0" pos="0"/>
+    <field name="frame.marked" showname="Frame is marked: False" size="0" pos="0"/>
+    <field name="frame.ignored" showname="Frame is ignored: False" size="0" pos="0"/>
+    <field name="frame.protocols" showname="Protocols in frame: eth:ip:udp:gtp:gtpv2:ipcp" size="0" pos="0"/>
+  </proto>
+  <proto name="eth" showname="Ethernet II, Src: Zte_78:5c:cf (00:22:93:78:5c:cf), Dst: Zte_fd:70:71 (4c:09:b4:fd:70:71)" size="14" pos="0">
+    <field name="eth.dst" showname="Destination: Zte_fd:70:71 (4c:09:b4:fd:70:71)" size="6" pos="0">
+      <field name="eth.addr" showname="Address: Zte_fd:70:71 (4c:09:b4:fd:70:71)" size="6" pos="0"/>
+      <field name="eth.lg" showname=".... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)" size="3" pos="0"/>
+      <field name="eth.ig" showname=".... ...0 .... .... .... .... = IG bit: Individual address (unicast)" size="3" pos="0"/>
+    </field>
+    <field name="eth.src" showname="Source: Zte_78:5c:cf (00:22:93:78:5c:cf)" size="6" pos="6">
+      <field name="eth.addr" showname="Address: Zte_78:5c:cf (00:22:93:78:5c:cf)" size="6" pos="6"/>
+      <field name="eth.lg" showname=".... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)" size="3" pos="6"/>
+      <field name="eth.ig" showname=".... ...0 .... .... .... .... = IG bit: Individual address (unicast)" size="3" pos="6"/>
+    </field>
+    <field name="eth.type" showname="Type: IP (0x0800)" size="2" pos="12"/>
+    <field name="eth.trailer" showname="Trailer: 01ff350cfb5949882321fe0178000c816200c00166130000..." size="31" pos="300"/>
+    <field name="eth.fcs" showname="Frame check sequence: 0x0f000001 [incorrect, should be 0x2626e049]" size="4" pos="331">
+      <field name="eth.fcs_good" showname="FCS Good: False" size="4" pos="331"/>
+      <field name="eth.fcs_bad" showname="FCS Bad: True" size="4" pos="331">
+        <field name="expert" showname="Expert Info (Error/Checksum): Bad checksum" size="0" pos="331">
+          <field name="expert.message" showname="Message: Bad checksum" size="0" pos="0"/>
+          <field name="expert.severity" showname="Severity level: Error" size="0" pos="0"/>
+          <field name="expert.group" showname="Group: Checksum" size="0" pos="0"/>
+        </field>
+      </field>
+    </field>
+  </proto>
+  <proto name="ip" showname="Internet Protocol Version 4, Src: 221.177.175.12 (221.177.175.12), Dst: 221.177.175.9 (221.177.175.9)" size="20" pos="14">
+    <field name="ip.version" showname="Version: 4" size="1" pos="14"/>
+    <field name="ip.hdr_len" showname="Header length: 20 bytes" size="1" pos="14"/>
+    <field name="ip.dsfield" showname="Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))" size="1" pos="15">
+      <field name="ip.dsfield.dscp" showname="0000 00.. = Differentiated Services Codepoint: Default (0x00)" size="1" pos="15"/>
+      <field name="ip.dsfield.ecn" showname=".... ..00 = Explicit Congestion Notification: Not-ECT (Not ECN-Capable Transport) (0x00)" size="1" pos="15"/>
+    </field>
+    <field name="ip.len" showname="Total Length: 286" size="2" pos="16"/>
+    <field name="ip.id" showname="Identification: 0x675d (26461)" size="2" pos="18"/>
+    <field name="ip.flags" showname="Flags: 0x00" size="1" pos="20">
+      <field name="ip.flags.rb" showname="0... .... = Reserved bit: Not set" size="1" pos="20"/>
+      <field name="ip.flags.df" showname=".0.. .... = Don&apos;t fragment: Not set" size="1" pos="20"/>
+      <field name="ip.flags.mf" showname="..0. .... = More fragments: Not set" size="1" pos="20"/>
+    </field>
+    <field name="ip.frag_offset" showname="Fragment offset: 0" size="2" pos="20"/>
+    <field name="ip.ttl" showname="Time to live: 255" size="1" pos="22"/>
+    <field name="ip.proto" showname="Protocol: UDP (17)" size="1" pos="23"/>
+    <field name="ip.checksum" showname="Header checksum: 0x39f8 [validation disabled]" size="2" pos="24">
+      <field name="ip.checksum_good" showname="Good: False" size="2" pos="24"/>
+      <field name="ip.checksum_bad" showname="Bad: False" size="2" pos="24"/>
+    </field>
+    <field name="ip.src" showname="Source: 221.177.175.12 (221.177.175.12)" size="4" pos="26"/>
+    <field name="ip.addr" showname="Source or Destination Address: 221.177.175.12 (221.177.175.12)" hide="yes" size="4" pos="26"/>
+    <field name="ip.src_host" showname="Source Host: 221.177.175.12" hide="yes" size="4" pos="26"/>
+    <field name="ip.host" showname="Source or Destination Host: 221.177.175.12" hide="yes" size="4" pos="26"/>
+    <field name="ip.dst" showname="Destination: 221.177.175.9 (221.177.175.9)" size="4" pos="30"/>
+    <field name="ip.addr" showname="Source or Destination Address: 221.177.175.9 (221.177.175.9)" hide="yes" size="4" pos="30"/>
+    <field name="ip.dst_host" showname="Destination Host: 221.177.175.9" hide="yes" size="4" pos="30"/>
+    <field name="ip.host" showname="Source or Destination Host: 221.177.175.9" hide="yes" size="4" pos="30"/>
+    <field name="" showname="Source GeoIP: Unknown" size="4" pos="26"/>
+    <field name="" showname="Destination GeoIP: Unknown" size="4" pos="30"/>
+  </proto>
+  <proto name="udp" showname="User Datagram Protocol, Src Port: gtp-control (2123), Dst Port: gtp-control (2123)" size="8" pos="34">
+    <field name="udp.srcport" showname="Source port: gtp-control (2123)" size="2" pos="34"/>
+    <field name="udp.dstport" showname="Destination port: gtp-control (2123)" size="2" pos="36"/>
+    <field name="udp.port" showname="Source or Destination Port: 2123" hide="yes" size="2" pos="34"/>
+    <field name="udp.port" showname="Source or Destination Port: 2123" hide="yes" size="2" pos="36"/>
+    <field name="udp.length" showname="Length: 266" size="2" pos="38"/>
+    <field name="udp.checksum_coverage" showname="Checksum coverage: 266" hide="yes" size="0" pos="38"/>
+    <field name="udp.checksum" showname="Checksum: 0x5e24 [validation disabled]" size="2" pos="40">
+      <field name="udp.checksum_good" showname="Good Checksum: False" size="2" pos="40"/>
+      <field name="udp.checksum_bad" showname="Bad Checksum: False" size="2" pos="40"/>
+    </field>
+  </proto>
+  <proto name="gtpv2" showname="GPRS Tunneling Protocol V2" size="258" pos="42"/>
+  <proto name="fake-field-wrapper">
+    <field name="" showname="Create Session Request" size="258" pos="42">
+      <field name="gtpv2.flags" showname="Flags: 0x48" size="1" pos="42">
+        <field name="gtpv2.version" showname="010. .... = Version: 2" size="1" pos="42"/>
+        <field name="gtpv2.p" showname="...0 .... = Piggybacking flag (P): 0" size="1" pos="42"/>
+        <field name="gtpv2.t" showname=".... 1... = TEID flag (T): 1" size="1" pos="42"/>
+      </field>
+      <field name="gtpv2.message_type" showname="Message Type: Create Session Request (32)" size="1" pos="43"/>
+      <field name="gtpv2.msg_lengt" showname="Message Length: 254" size="2" pos="44"/>
+      <field name="gtpv2.teid" showname="Tunnel Endpoint Identifier: 0" size="4" pos="46"/>
+      <field name="gtpv2.seq" showname="Sequence Number: 3386075" size="3" pos="50"/>
+      <field name="gtpv2.spare" showname="Spare: 0" size="1" pos="53"/>
+      <field name="" showname="International Mobile Subscriber Identity (IMSI) : 460005164797966" size="12" pos="54">
+        <field name="gtpv2.ie_type" showname="IE Type: International Mobile Subscriber Identity (IMSI) (1)" size="1" pos="54"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 8" size="2" pos="55"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="57"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="57"/>
+        <field name="gtpv2.imsi" showname="IMSI(International Mobile Subscriber Identity number): 460005164797966" size="8" pos="58"/>
+      </field>
+      <field name="" showname="MSISDN : 8613974980743" size="11" pos="66">
+        <field name="gtpv2.ie_type" showname="IE Type: MSISDN (76)" size="1" pos="66"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 7" size="2" pos="67"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="69"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="69"/>
+        <field name="" showname="Country Code: 86 China (People&apos;s Republic of) (length 2)" size="1" pos="70"/>
+        <field name="gtpv2.address_digits" showname="Address digits: 8613974980743" size="7" pos="70"/>
+      </field>
+      <field name="" showname="Mobile Equipment Identity (MEI) : 8659820229263500" size="12" pos="77">
+        <field name="gtpv2.ie_type" showname="IE Type: Mobile Equipment Identity (MEI) (75)" size="1" pos="77"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 8" size="2" pos="78"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="80"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="80"/>
+        <field name="gtpv2.mei" showname="MEI(Mobile Equipment Identity): 8659820229263500" size="8" pos="81"/>
+      </field>
+      <field name="" showname="User Location Info (ULI) : TAI ECGI " size="17" pos="89">
+        <field name="gtpv2.ie_type" showname="IE Type: User Location Info (ULI) (86)" size="1" pos="89"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 13" size="2" pos="90"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="92"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="92"/>
+        <field name="" showname="Flags" size="1" pos="93">
+          <field name="gtpv2.spare_bits" showname="00.. .... = Spare bit(s): 0" size="1" pos="93"/>
+          <field name="gtpv2.uli_lai_flg" showname="..0. .... = LAI Present Flag: False" size="1" pos="93"/>
+          <field name="gtpv2.uli_ecgi_flg" showname="...1 .... = ECGI Present Flag: True" size="1" pos="93"/>
+          <field name="gtpv2.uli_tai_flg" showname=".... 1... = TAI Present Flag: True" size="1" pos="93"/>
+          <field name="gtpv2.uli_rai_flg" showname=".... .0.. = RAI Present Flag: False" size="1" pos="93"/>
+          <field name="gtpv2.uli_sai_flg" showname=".... ..0. = SAI Present Flag: False" size="1" pos="93"/>
+          <field name="gtpv2.uli_cgi_flg" showname=".... ...0 = CGI Present Flag: False" size="1" pos="93"/>
+        </field>
+        <field name="" showname="Tracking Area Identity (TAI)" size="5" pos="94">
+          <field name="e212.mcc" showname="Mobile Country Code (MCC): China (People&apos;s Republic of) (460)" size="2" pos="94"/>
+          <field name="e212.mnc" showname="Mobile Network Code (MNC): China Mobile (00)" size="2" pos="95"/>
+          <field name="gtpv2.uli_tai_tac" showname="Tracking Area Code: 58212" size="2" pos="97"/>
+        </field>
+        <field name="" showname="E-UTRAN Cell Global Identifier (ECGI)" size="7" pos="99">
+          <field name="e212.mcc" showname="Mobile Country Code (MCC): China (People&apos;s Republic of) (460)" size="2" pos="99"/>
+          <field name="e212.mnc" showname="Mobile Network Code (MNC): China Mobile (00)" size="2" pos="100"/>
+          <field name="gtpv2.uli_ecgi_eci_spare" showname="Spare: 0" size="1" pos="102"/>
+          <field name="gtpv2.uli_ecgi_eci" showname="ECI (E-UTRAN Cell Identifier): 121253378" size="4" pos="102"/>
+        </field>
+      </field>
+      <field name="" showname="Serving Network : MCC 460 China (People&apos;s Republic of), MNC 00 China Mobile" size="7" pos="106">
+        <field name="gtpv2.ie_type" showname="IE Type: Serving Network (83)" size="1" pos="106"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 3" size="2" pos="107"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="109"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="109"/>
+        <field name="e212.mcc" showname="Mobile Country Code (MCC): China (People&apos;s Republic of) (460)" size="2" pos="110"/>
+        <field name="e212.mnc" showname="Mobile Network Code (MNC): China Mobile (00)" size="2" pos="111"/>
+      </field>
+      <field name="" showname="RAT Type : EUTRAN (6)" size="5" pos="113">
+        <field name="gtpv2.ie_type" showname="IE Type: RAT Type (82)" size="1" pos="113"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="114"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="116"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="116"/>
+        <field name="gtpv2.rat_type" showname="RAT Type: EUTRAN (6)" size="1" pos="117"/>
+      </field>
+      <field name="" showname="Indication : " size="6" pos="118">
+        <field name="gtpv2.ie_type" showname="IE Type: Indication (77)" size="1" pos="118"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 2" size="2" pos="119"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="121"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="121"/>
+        <field name="gtpv2.daf" showname="0... .... = DAF (Dual Address Bearer Flag): False" size="1" pos="122"/>
+        <field name="gtpv2.dtf" showname=".0.. .... = DTF (Direct Tunnel Flag): False" size="1" pos="122"/>
+        <field name="gtpv2.hi" showname="..0. .... = HI (Handover Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.dfi" showname="...0 .... = DFI (Direct Forwarding Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.oi" showname=".... 0... = OI (Operation Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.isrsi" showname=".... .0.. = ISRSI (Idle mode Signalling Reduction Supported Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.israi" showname=".... ..0. = ISRAI (Idle mode Signalling Reduction Activation Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.sgwci" showname=".... ...0 = SGWCI (SGW Change Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.sqci" showname="0... .... = SQCI (Subscribed QoS Change Indication: False" size="1" pos="123"/>
+        <field name="gtpv2.uimsi" showname=".0.. .... = UIMSI (Unauthenticated IMSI): False" size="1" pos="123"/>
+        <field name="gtpv2.cfsi" showname="..0. .... = CFSI (Change F-TEID support indication): False" size="1" pos="123"/>
+        <field name="gtpv2.crsi" showname="...0 .... = CRSI (Change Reporting support indication):: False" size="1" pos="123"/>
+        <field name="gtpv2.ps" showname=".... 1... = PS (Piggybacking Supported).): True" size="1" pos="123"/>
+        <field name="gtpv2.pt" showname=".... .0.. = PT (Protocol Type): False" size="1" pos="123"/>
+        <field name="gtpv2.si" showname=".... ..0. = SI (Scope Indication): False" size="1" pos="123"/>
+        <field name="gtpv2.msv" showname=".... ...0 = MSV (MS Validated): False" size="1" pos="123"/>
+      </field>
+      <field name="" showname="Fully Qualified Tunnel Endpoint Identifier (F-TEID) : S5/S8 SGW GTP-C interface, TEID/GRE Key: 0x2c7f014f, IPv4 221.177.175.12" size="13" pos="124">
+        <field name="gtpv2.ie_type" showname="IE Type: Fully Qualified Tunnel Endpoint Identifier (F-TEID) (87)" size="1" pos="124"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 9" size="2" pos="125"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="127"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="127"/>
+        <field name="gtpv2.f_teid_v4" showname="1... .... = V4: IPv4 address present" size="1" pos="128"/>
+        <field name="gtpv2.f_teid_v6" showname=".0.. .... = V6: IPv6 address not present" size="1" pos="128"/>
+        <field name="gtpv2.f_teid_interface_type" showname="..00 0110 = Interface Type: S5/S8 SGW GTP-C interface (6)" size="1" pos="128"/>
+        <field name="gtpv2.f_teid_gre_key" showname="TEID/GRE Key: 0x2c7f014f" size="4" pos="129"/>
+        <field name="gtpv2.f_teid_ipv4" showname="F-TEID IPv4: 221.177.175.12 (221.177.175.12)" size="4" pos="133"/>
+      </field>
+      <field name="" showname="Access Point Name (APN) : cmnet.mnc000.mcc460.gprs" size="29" pos="137">
+        <field name="gtpv2.ie_type" showname="IE Type: Access Point Name (APN) (71)" size="1" pos="137"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 25" size="2" pos="138"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="140"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="140"/>
+        <field name="gtpv2.apn" showname="APN (Access Point Name): cmnet.mnc000.mcc460.gprs" size="25" pos="141"/>
+      </field>
+      <field name="" showname="Charging Characteristics : " size="6" pos="166">
+        <field name="gtpv2.ie_type" showname="IE Type: Charging Characteristics (95)" size="1" pos="166"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 2" size="2" pos="167"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="169"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="169"/>
+        <field name="gtpv2.charging_characteristic" showname="0000 0100 0000 0000 = Charging Characteristic: 0x0400" size="2" pos="170"/>
+      </field>
+      <field name="" showname="Selection Mode : MS or network provided APN, subscribed verified" size="5" pos="172">
+        <field name="gtpv2.ie_type" showname="IE Type: Selection Mode (128)" size="1" pos="172"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="173"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="175"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="175"/>
+        <field name="gtpv2.selec_mode" showname=".... ..00 = Selection Mode: MS or network provided APN, subscribed verified (0)" size="1" pos="176"/>
+      </field>
+      <field name="" showname="PDN Type : IPv4" size="5" pos="177">
+        <field name="gtpv2.ie_type" showname="IE Type: PDN Type (99)" size="1" pos="177"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="178"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="180"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="180"/>
+        <field name="gtpv2.spare_bits" showname="0000 0... = Spare bit(s): 0" size="1" pos="181"/>
+        <field name="gtpv2.pdn_type" showname=".... .001 = PDN Type: IPv4 (1)" size="1" pos="181"/>
+      </field>
+      <field name="" showname="PDN Address Allocation (PAA) : " size="9" pos="182">
+        <field name="gtpv2.ie_type" showname="IE Type: PDN Address Allocation (PAA) (79)" size="1" pos="182"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 5" size="2" pos="183"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="185"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="185"/>
+        <field name="gtpv2.pdn_type" showname=".... .001 = PDN Type: IPv4 (1)" size="1" pos="186"/>
+        <field name="gtpv2.pdn_addr_and_prefix.ipv4" showname="PDN Address and Prefix(IPv4): 0.0.0.0 (0.0.0.0)" size="4" pos="187"/>
+      </field>
+      <field name="" showname="APN Restriction : value 0" size="5" pos="191">
+        <field name="gtpv2.ie_type" showname="IE Type: APN Restriction (127)" size="1" pos="191"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="192"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="194"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="194"/>
+        <field name="gtpv2.apn_rest" showname="APN Restriction: 0" size="1" pos="195"/>
+      </field>
+      <field name="" showname="Aggregate Maximum Bit Rate (AMBR) : " size="12" pos="196">
+        <field name="gtpv2.ie_type" showname="IE Type: Aggregate Maximum Bit Rate (AMBR) (72)" size="1" pos="196"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 8" size="2" pos="197"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="199"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="199"/>
+        <field name="gtpv2.ambr_up" showname="AMBR Uplink (Aggregate Maximum Bit Rate for Uplink): 838860" size="4" pos="200"/>
+        <field name="gtpv2.ambr_down" showname="AMBR Downlink(Aggregate Maximum Bit Rate for Downlink): 838860" size="4" pos="204"/>
+      </field>
+      <field name="" showname="Protocol Configuration Options (PCO) : " size="33" pos="208">
+        <field name="gtpv2.ie_type" showname="IE Type: Protocol Configuration Options (PCO) (78)" size="1" pos="208"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 29" size="2" pos="209"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="211"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="211"/>
+        <field name="gsm_a.gm.sm.link_dir" showname="Link direction: MS to network (0)" size="0" pos="212"/>
+        <field name="gsm_a.gm.sm.ext" showname="1... .... = Extension: True" size="1" pos="212"/>
+        <field name="" showname="Configuration Protocol: PPP for use with IP PDP type or IP PDN type (0)" size="1" pos="212"/>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: Internet Protocol Control Protocol (0x8021)" size="2" pos="213">
+          <field name="" showname="Length: 0x10 (16)" size="1" pos="215"/>
+          <proto name="ipcp" showname="PPP IP Control Protocol" size="16" pos="216">
+            <field name="ppp.code" showname="Code: Configuration Request (1)" size="1" pos="216"/>
+            <field name="ppp.identifier" showname="Identifier: 0 (0x00)" size="1" pos="217"/>
+            <field name="ppp.length" showname="Length: 16" size="2" pos="218"/>
+            <field name="" showname="Options: (12 bytes), Primary DNS Server IP Address, Secondary DNS Server IP Address" size="12" pos="220">
+              <field name="" showname="Primary DNS Server IP Address: 0.0.0.0" size="6" pos="220">
+                <field name="ipcp.opt.type" showname="Type: Primary DNS Server IP Address (129)" size="1" pos="220"/>
+                <field name="ipcp.opt.length" showname="Length: 6" size="1" pos="221"/>
+                <field name="ipcp.opt.pri_dns_address" showname="Primary DNS Address: 0.0.0.0 (0.0.0.0)" size="4" pos="222"/>
+              </field>
+              <field name="" showname="Secondary DNS Server IP Address: 0.0.0.0" size="6" pos="226">
+                <field name="ipcp.opt.type" showname="Type: Secondary DNS Server IP Address (131)" size="1" pos="226"/>
+                <field name="ipcp.opt.length" showname="Length: 6" size="1" pos="227"/>
+                <field name="ipcp.opt.sec_dns_address" showname="Secondary DNS Address: 0.0.0.0 (0.0.0.0)" size="4" pos="228"/>
+              </field>
+            </field>
+          </proto>
+        </field>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: DNS Server IPv4 Address Request (0x000d)" size="2" pos="232">
+          <field name="" showname="Length: 0x00 (0)" size="1" pos="234"/>
+        </field>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: IP address allocation via NAS signalling (0x000a)" size="2" pos="235">
+          <field name="" showname="Length: 0x00 (0)" size="1" pos="237"/>
+        </field>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: IPv4 Link MTU Request (0x0010)" size="2" pos="238">
+          <field name="" showname="Length: 0x00 (0)" size="1" pos="240"/>
+        </field>
+      </field>
+      <field name="" showname="Bearer Context : [Grouped IE]" size="48" pos="241">
+        <field name="gtpv2.ie_type" showname="IE Type: Bearer Context (93)" size="1" pos="241"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 44" size="2" pos="242"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="244"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="244"/>
+        <field name="" showname="EPS Bearer ID (EBI) : 5" size="5" pos="245">
+          <field name="gtpv2.ie_type" showname="IE Type: EPS Bearer ID (EBI) (73)" size="1" pos="245"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="246"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="248"/>
+          <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="248"/>
+          <field name="gtpv2.spare_bits" showname="0000 .... = Spare bit(s): 0" size="1" pos="249"/>
+          <field name="gtpv2.ebi" showname=".... 0101 = EPS Bearer ID (EBI): 5" size="1" pos="249"/>
+        </field>
+        <field name="" showname="Fully Qualified Tunnel Endpoint Identifier (F-TEID) : S5/S8 SGW GTP-U interface, TEID/GRE Key: 0x2c5c8dfd, IPv4 221.177.175.13" size="13" pos="250">
+          <field name="gtpv2.ie_type" showname="IE Type: Fully Qualified Tunnel Endpoint Identifier (F-TEID) (87)" size="1" pos="250"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 9" size="2" pos="251"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="253"/>
+          <field name="gtpv2.instance" showname=".... 0010 = Instance: 2" size="1" pos="253"/>
+          <field name="gtpv2.f_teid_v4" showname="1... .... = V4: IPv4 address present" size="1" pos="254"/>
+          <field name="gtpv2.f_teid_v6" showname=".0.. .... = V6: IPv6 address not present" size="1" pos="254"/>
+          <field name="gtpv2.f_teid_interface_type" showname="..00 0100 = Interface Type: S5/S8 SGW GTP-U interface (4)" size="1" pos="254"/>
+          <field name="gtpv2.f_teid_gre_key" showname="TEID/GRE Key: 0x2c5c8dfd" size="4" pos="255"/>
+          <field name="gtpv2.f_teid_ipv4" showname="F-TEID IPv4: 221.177.175.13 (221.177.175.13)" size="4" pos="259"/>
+        </field>
+        <field name="" showname="Bearer Level Quality of Service (Bearer QoS) : " size="26" pos="263">
+          <field name="gtpv2.ie_type" showname="IE Type: Bearer Level Quality of Service (Bearer QoS) (80)" size="1" pos="263"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 22" size="2" pos="264"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="266"/>
+          <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="266"/>
+          <field name="gtpv2.bearer_qos_pvi" showname=".... ...0 = PVI (Pre-emption Vulnerability): Enabled" size="1" pos="267"/>
+          <field name="gtpv2.bearer_qos_pl" showname="..00 01.. = PL (Priority Level): 1" size="1" pos="267"/>
+          <field name="gtpv2.bearer_qos_pci" showname=".1.. .... = PCI (Pre-emption Capability): Disabled" size="1" pos="267"/>
+          <field name="gtpv2.bearer_qos_label_qci" showname="Label (QCI): 6" size="1" pos="268"/>
+          <field name="gtpv2.bearer_qos_mbr_up" showname="Maximum Bit Rate For Uplink: 0" size="5" pos="269"/>
+          <field name="gtpv2.bearer_qos_mbr_down" showname="Maximum Bit Rate For Downlink: 0" size="5" pos="274"/>
+          <field name="gtpv2.bearer_qos_gbr_up" showname="Guaranteed Bit Rate For Uplink: 0" size="5" pos="279"/>
+          <field name="gtpv2.bearer_qos_gbr_down" showname="Guaranteed Bit Rate For Downlink: 0" size="5" pos="284"/>
+        </field>
+      </field>
+      <field name="" showname="Recovery (Restart Counter) : 7" size="5" pos="289">
+        <field name="gtpv2.ie_type" showname="IE Type: Recovery (Restart Counter) (3)" size="1" pos="289"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="290"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="292"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="292"/>
+        <field name="gtpv2.rec" showname="Restart Counter: 7" size="1" pos="293"/>
+      </field>
+      <field name="" showname="UE Time Zone : " size="6" pos="294">
+        <field name="gtpv2.ie_type" showname="IE Type: UE Time Zone (114)" size="1" pos="294"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 2" size="2" pos="295"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="297"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="297"/>
+        <field name="" showname="Timezone: GMT + 8 hours 0 minutes" size="1" pos="298"/>
+        <field name="gtpv2.ue_time_zone_dst" showname=".... ..00 = Daylight Saving Time: No Adjustments for Daylight Saving Time (0)" size="1" pos="299"/>
+      </field>
+  </field>
+</proto>
+
+<Frame len="335">
+4c 09 b4 fd 70 71 00 22 93 78 5c cf 08 00 45 00
+01 1e 67 5d 00 00 ff 11 39 f8 dd b1 af 0c dd b1
+af 09 08 4b 08 4b 01 0a 5e 24 48 20 00 fe 00 00
+00 00 33 aa db 00 01 00 08 00 64 00 50 61 74 79
+69 f6 4c 00 07 00 68 31 79 94 08 47 f3 4b 00 08
+00 68 95 28 20 92 62 53 00 56 00 0d 00 18 64 f0
+00 e3 64 64 f0 00 07 3a 2e 02 53 00 03 00 64 f0
+00 52 00 01 00 06 4d 00 02 00 00 08 57 00 09 00
+86 2c 7f 01 4f dd b1 af 0c 47 00 19 00 05 63 6d
+6e 65 74 06 6d 6e 63 30 30 30 06 6d 63 63 34 36
+30 04 67 70 72 73 5f 00 02 00 04 00 80 00 01 00
+00 63 00 01 00 01 4f 00 05 00 01 00 00 00 00 7f
+00 01 00 00 48 00 08 00 00 0c cc cc 00 0c cc cc
+4e 00 1d 00 80 80 21 10 01 00 00 10 81 06 00 00
+00 00 83 06 00 00 00 00 00 0d 00 00 0a 00 00 10
+00 5d 00 2c 00 49 00 01 00 05 57 00 09 02 84 2c
+5c 8d fd dd b1 af 0d 50 00 16 00 44 06 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 03 00 01 00 07 72 00 02 00 23 00 01 ff 35 0c
+fb 59 49 88 23 21 fe 01 78 00 0c 81 62 00 c0 01
+66 13 00 00 00 00 00 00 01 01 a9 0f 00 00 01
+</Frame>
+<Color color="1" />
+<Interface intf="4009" />
+<Direction direction="1" />
+<Binary bid="4966" />
+</packet>
+
+<packet id="2">
+<brief time="2015-07-03 09:25:46.165151" src="221.177.175.12" dst="221.177.175.9" protocol="GTPv2" length="335" info="Create Session Request " />
+  <proto name="frame" showname="Frame 2: 335 bytes on wire (2680 bits), 335 bytes captured (2680 bits)" size="335" pos="0">
+    <field name="frame.encap_type" showname="Encapsulation type: Ethernet (1)" size="0" pos="0"/>
+    <field name="frame.time" showname="Arrival Time: Jul  3, 2015 09:25:46.165151000 CST" size="0" pos="0"/>
+    <field name="frame.offset_shift" showname="Time shift for this packet: 0.000000000 seconds" size="0" pos="0"/>
+    <field name="frame.time_epoch" showname="Epoch Time: 1435886746.165151000 seconds" size="0" pos="0"/>
+    <field name="frame.time_delta" showname="Time delta from previous captured frame: 0.000006000 seconds" size="0" pos="0"/>
+    <field name="frame.time_delta_displayed" showname="Time delta from previous displayed frame: 0.000006000 seconds" size="0" pos="0"/>
+    <field name="frame.time_relative" showname="Time since reference or first frame: 0.000006000 seconds" size="0" pos="0"/>
+    <field name="frame.number" showname="Frame Number: 2" size="0" pos="0"/>
+    <field name="frame.len" showname="Frame Length: 335 bytes (2680 bits)" size="0" pos="0"/>
+    <field name="frame.cap_len" showname="Capture Length: 335 bytes (2680 bits)" size="0" pos="0"/>
+    <field name="frame.marked" showname="Frame is marked: False" size="0" pos="0"/>
+    <field name="frame.ignored" showname="Frame is ignored: False" size="0" pos="0"/>
+    <field name="frame.protocols" showname="Protocols in frame: eth:ip:udp:gtp:gtpv2:ipcp" size="0" pos="0"/>
+  </proto>
+  <proto name="eth" showname="Ethernet II, Src: Zte_fd:70:71 (4c:09:b4:fd:70:71), Dst: Zte_78:59:cf (00:22:93:78:59:cf)" size="14" pos="0">
+    <field name="eth.dst" showname="Destination: Zte_78:59:cf (00:22:93:78:59:cf)" size="6" pos="0">
+      <field name="eth.addr" showname="Address: Zte_78:59:cf (00:22:93:78:59:cf)" size="6" pos="0"/>
+      <field name="eth.lg" showname=".... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)" size="3" pos="0"/>
+      <field name="eth.ig" showname=".... ...0 .... .... .... .... = IG bit: Individual address (unicast)" size="3" pos="0"/>
+    </field>
+    <field name="eth.src" showname="Source: Zte_fd:70:71 (4c:09:b4:fd:70:71)" size="6" pos="6">
+      <field name="eth.addr" showname="Address: Zte_fd:70:71 (4c:09:b4:fd:70:71)" size="6" pos="6"/>
+      <field name="eth.lg" showname=".... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)" size="3" pos="6"/>
+      <field name="eth.ig" showname=".... ...0 .... .... .... .... = IG bit: Individual address (unicast)" size="3" pos="6"/>
+    </field>
+    <field name="eth.type" showname="Type: IP (0x0800)" size="2" pos="12"/>
+    <field name="eth.trailer" showname="Trailer: 13a2ae22905a49882321fe0178000c816100c00166130000..." size="31" pos="300"/>
+    <field name="eth.fcs" showname="Frame check sequence: 0x0f000001 [incorrect, should be 0x51a796c5]" size="4" pos="331">
+      <field name="eth.fcs_good" showname="FCS Good: False" size="4" pos="331"/>
+      <field name="eth.fcs_bad" showname="FCS Bad: True" size="4" pos="331">
+        <field name="expert" showname="Expert Info (Error/Checksum): Bad checksum" size="0" pos="331">
+          <field name="expert.message" showname="Message: Bad checksum" size="0" pos="0"/>
+          <field name="expert.severity" showname="Severity level: Error" size="0" pos="0"/>
+          <field name="expert.group" showname="Group: Checksum" size="0" pos="0"/>
+        </field>
+      </field>
+    </field>
+  </proto>
+  <proto name="ip" showname="Internet Protocol Version 4, Src: 221.177.175.12 (221.177.175.12), Dst: 221.177.175.9 (221.177.175.9)" size="20" pos="14">
+    <field name="ip.version" showname="Version: 4" size="1" pos="14"/>
+    <field name="ip.hdr_len" showname="Header length: 20 bytes" size="1" pos="14"/>
+    <field name="ip.dsfield" showname="Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))" size="1" pos="15">
+      <field name="ip.dsfield.dscp" showname="0000 00.. = Differentiated Services Codepoint: Default (0x00)" size="1" pos="15"/>
+      <field name="ip.dsfield.ecn" showname=".... ..00 = Explicit Congestion Notification: Not-ECT (Not ECN-Capable Transport) (0x00)" size="1" pos="15"/>
+    </field>
+    <field name="ip.len" showname="Total Length: 286" size="2" pos="16"/>
+    <field name="ip.id" showname="Identification: 0x675d (26461)" size="2" pos="18"/>
+    <field name="ip.flags" showname="Flags: 0x00" size="1" pos="20">
+      <field name="ip.flags.rb" showname="0... .... = Reserved bit: Not set" size="1" pos="20"/>
+      <field name="ip.flags.df" showname=".0.. .... = Don&apos;t fragment: Not set" size="1" pos="20"/>
+      <field name="ip.flags.mf" showname="..0. .... = More fragments: Not set" size="1" pos="20"/>
+    </field>
+    <field name="ip.frag_offset" showname="Fragment offset: 0" size="2" pos="20"/>
+    <field name="ip.ttl" showname="Time to live: 254" size="1" pos="22"/>
+    <field name="ip.proto" showname="Protocol: UDP (17)" size="1" pos="23"/>
+    <field name="ip.checksum" showname="Header checksum: 0x3af8 [validation disabled]" size="2" pos="24">
+      <field name="ip.checksum_good" showname="Good: False" size="2" pos="24"/>
+      <field name="ip.checksum_bad" showname="Bad: False" size="2" pos="24"/>
+    </field>
+    <field name="ip.src" showname="Source: 221.177.175.12 (221.177.175.12)" size="4" pos="26"/>
+    <field name="ip.addr" showname="Source or Destination Address: 221.177.175.12 (221.177.175.12)" hide="yes" size="4" pos="26"/>
+    <field name="ip.src_host" showname="Source Host: 221.177.175.12" hide="yes" size="4" pos="26"/>
+    <field name="ip.host" showname="Source or Destination Host: 221.177.175.12" hide="yes" size="4" pos="26"/>
+    <field name="ip.dst" showname="Destination: 221.177.175.9 (221.177.175.9)" size="4" pos="30"/>
+    <field name="ip.addr" showname="Source or Destination Address: 221.177.175.9 (221.177.175.9)" hide="yes" size="4" pos="30"/>
+    <field name="ip.dst_host" showname="Destination Host: 221.177.175.9" hide="yes" size="4" pos="30"/>
+    <field name="ip.host" showname="Source or Destination Host: 221.177.175.9" hide="yes" size="4" pos="30"/>
+    <field name="" showname="Source GeoIP: Unknown" size="4" pos="26"/>
+    <field name="" showname="Destination GeoIP: Unknown" size="4" pos="30"/>
+  </proto>
+  <proto name="udp" showname="User Datagram Protocol, Src Port: gtp-control (2123), Dst Port: gtp-control (2123)" size="8" pos="34">
+    <field name="udp.srcport" showname="Source port: gtp-control (2123)" size="2" pos="34"/>
+    <field name="udp.dstport" showname="Destination port: gtp-control (2123)" size="2" pos="36"/>
+    <field name="udp.port" showname="Source or Destination Port: 2123" hide="yes" size="2" pos="34"/>
+    <field name="udp.port" showname="Source or Destination Port: 2123" hide="yes" size="2" pos="36"/>
+    <field name="udp.length" showname="Length: 266" size="2" pos="38"/>
+    <field name="udp.checksum_coverage" showname="Checksum coverage: 266" hide="yes" size="0" pos="38"/>
+    <field name="udp.checksum" showname="Checksum: 0x5e24 [validation disabled]" size="2" pos="40">
+      <field name="udp.checksum_good" showname="Good Checksum: False" size="2" pos="40"/>
+      <field name="udp.checksum_bad" showname="Bad Checksum: False" size="2" pos="40"/>
+    </field>
+  </proto>
+  <proto name="gtpv2" showname="GPRS Tunneling Protocol V2" size="258" pos="42"/>
+  <proto name="fake-field-wrapper">
+    <field name="" showname="Create Session Request" size="258" pos="42">
+      <field name="gtpv2.flags" showname="Flags: 0x48" size="1" pos="42">
+        <field name="gtpv2.version" showname="010. .... = Version: 2" size="1" pos="42"/>
+        <field name="gtpv2.p" showname="...0 .... = Piggybacking flag (P): 0" size="1" pos="42"/>
+        <field name="gtpv2.t" showname=".... 1... = TEID flag (T): 1" size="1" pos="42"/>
+      </field>
+      <field name="gtpv2.message_type" showname="Message Type: Create Session Request (32)" size="1" pos="43"/>
+      <field name="gtpv2.msg_lengt" showname="Message Length: 254" size="2" pos="44"/>
+      <field name="gtpv2.teid" showname="Tunnel Endpoint Identifier: 0" size="4" pos="46"/>
+      <field name="gtpv2.seq" showname="Sequence Number: 3386075" size="3" pos="50"/>
+      <field name="gtpv2.spare" showname="Spare: 0" size="1" pos="53"/>
+      <field name="" showname="International Mobile Subscriber Identity (IMSI) : 460005164797966" size="12" pos="54">
+        <field name="gtpv2.ie_type" showname="IE Type: International Mobile Subscriber Identity (IMSI) (1)" size="1" pos="54"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 8" size="2" pos="55"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="57"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="57"/>
+        <field name="gtpv2.imsi" showname="IMSI(International Mobile Subscriber Identity number): 460005164797966" size="8" pos="58"/>
+      </field>
+      <field name="" showname="MSISDN : 8613974980743" size="11" pos="66">
+        <field name="gtpv2.ie_type" showname="IE Type: MSISDN (76)" size="1" pos="66"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 7" size="2" pos="67"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="69"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="69"/>
+        <field name="" showname="Country Code: 86 China (People&apos;s Republic of) (length 2)" size="1" pos="70"/>
+        <field name="gtpv2.address_digits" showname="Address digits: 8613974980743" size="7" pos="70"/>
+      </field>
+      <field name="" showname="Mobile Equipment Identity (MEI) : 8659820229263500" size="12" pos="77">
+        <field name="gtpv2.ie_type" showname="IE Type: Mobile Equipment Identity (MEI) (75)" size="1" pos="77"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 8" size="2" pos="78"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="80"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="80"/>
+        <field name="gtpv2.mei" showname="MEI(Mobile Equipment Identity): 8659820229263500" size="8" pos="81"/>
+      </field>
+      <field name="" showname="User Location Info (ULI) : TAI ECGI " size="17" pos="89">
+        <field name="gtpv2.ie_type" showname="IE Type: User Location Info (ULI) (86)" size="1" pos="89"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 13" size="2" pos="90"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="92"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="92"/>
+        <field name="" showname="Flags" size="1" pos="93">
+          <field name="gtpv2.spare_bits" showname="00.. .... = Spare bit(s): 0" size="1" pos="93"/>
+          <field name="gtpv2.uli_lai_flg" showname="..0. .... = LAI Present Flag: False" size="1" pos="93"/>
+          <field name="gtpv2.uli_ecgi_flg" showname="...1 .... = ECGI Present Flag: True" size="1" pos="93"/>
+          <field name="gtpv2.uli_tai_flg" showname=".... 1... = TAI Present Flag: True" size="1" pos="93"/>
+          <field name="gtpv2.uli_rai_flg" showname=".... .0.. = RAI Present Flag: False" size="1" pos="93"/>
+          <field name="gtpv2.uli_sai_flg" showname=".... ..0. = SAI Present Flag: False" size="1" pos="93"/>
+          <field name="gtpv2.uli_cgi_flg" showname=".... ...0 = CGI Present Flag: False" size="1" pos="93"/>
+        </field>
+        <field name="" showname="Tracking Area Identity (TAI)" size="5" pos="94">
+          <field name="e212.mcc" showname="Mobile Country Code (MCC): China (People&apos;s Republic of) (460)" size="2" pos="94"/>
+          <field name="e212.mnc" showname="Mobile Network Code (MNC): China Mobile (00)" size="2" pos="95"/>
+          <field name="gtpv2.uli_tai_tac" showname="Tracking Area Code: 58212" size="2" pos="97"/>
+        </field>
+        <field name="" showname="E-UTRAN Cell Global Identifier (ECGI)" size="7" pos="99">
+          <field name="e212.mcc" showname="Mobile Country Code (MCC): China (People&apos;s Republic of) (460)" size="2" pos="99"/>
+          <field name="e212.mnc" showname="Mobile Network Code (MNC): China Mobile (00)" size="2" pos="100"/>
+          <field name="gtpv2.uli_ecgi_eci_spare" showname="Spare: 0" size="1" pos="102"/>
+          <field name="gtpv2.uli_ecgi_eci" showname="ECI (E-UTRAN Cell Identifier): 121253378" size="4" pos="102"/>
+        </field>
+      </field>
+      <field name="" showname="Serving Network : MCC 460 China (People&apos;s Republic of), MNC 00 China Mobile" size="7" pos="106">
+        <field name="gtpv2.ie_type" showname="IE Type: Serving Network (83)" size="1" pos="106"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 3" size="2" pos="107"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="109"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="109"/>
+        <field name="e212.mcc" showname="Mobile Country Code (MCC): China (People&apos;s Republic of) (460)" size="2" pos="110"/>
+        <field name="e212.mnc" showname="Mobile Network Code (MNC): China Mobile (00)" size="2" pos="111"/>
+      </field>
+      <field name="" showname="RAT Type : EUTRAN (6)" size="5" pos="113">
+        <field name="gtpv2.ie_type" showname="IE Type: RAT Type (82)" size="1" pos="113"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="114"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="116"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="116"/>
+        <field name="gtpv2.rat_type" showname="RAT Type: EUTRAN (6)" size="1" pos="117"/>
+      </field>
+      <field name="" showname="Indication : " size="6" pos="118">
+        <field name="gtpv2.ie_type" showname="IE Type: Indication (77)" size="1" pos="118"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 2" size="2" pos="119"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="121"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="121"/>
+        <field name="gtpv2.daf" showname="0... .... = DAF (Dual Address Bearer Flag): False" size="1" pos="122"/>
+        <field name="gtpv2.dtf" showname=".0.. .... = DTF (Direct Tunnel Flag): False" size="1" pos="122"/>
+        <field name="gtpv2.hi" showname="..0. .... = HI (Handover Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.dfi" showname="...0 .... = DFI (Direct Forwarding Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.oi" showname=".... 0... = OI (Operation Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.isrsi" showname=".... .0.. = ISRSI (Idle mode Signalling Reduction Supported Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.israi" showname=".... ..0. = ISRAI (Idle mode Signalling Reduction Activation Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.sgwci" showname=".... ...0 = SGWCI (SGW Change Indication): False" size="1" pos="122"/>
+        <field name="gtpv2.sqci" showname="0... .... = SQCI (Subscribed QoS Change Indication: False" size="1" pos="123"/>
+        <field name="gtpv2.uimsi" showname=".0.. .... = UIMSI (Unauthenticated IMSI): False" size="1" pos="123"/>
+        <field name="gtpv2.cfsi" showname="..0. .... = CFSI (Change F-TEID support indication): False" size="1" pos="123"/>
+        <field name="gtpv2.crsi" showname="...0 .... = CRSI (Change Reporting support indication):: False" size="1" pos="123"/>
+        <field name="gtpv2.ps" showname=".... 1... = PS (Piggybacking Supported).): True" size="1" pos="123"/>
+        <field name="gtpv2.pt" showname=".... .0.. = PT (Protocol Type): False" size="1" pos="123"/>
+        <field name="gtpv2.si" showname=".... ..0. = SI (Scope Indication): False" size="1" pos="123"/>
+        <field name="gtpv2.msv" showname=".... ...0 = MSV (MS Validated): False" size="1" pos="123"/>
+      </field>
+      <field name="" showname="Fully Qualified Tunnel Endpoint Identifier (F-TEID) : S5/S8 SGW GTP-C interface, TEID/GRE Key: 0x2c7f014f, IPv4 221.177.175.12" size="13" pos="124">
+        <field name="gtpv2.ie_type" showname="IE Type: Fully Qualified Tunnel Endpoint Identifier (F-TEID) (87)" size="1" pos="124"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 9" size="2" pos="125"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="127"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="127"/>
+        <field name="gtpv2.f_teid_v4" showname="1... .... = V4: IPv4 address present" size="1" pos="128"/>
+        <field name="gtpv2.f_teid_v6" showname=".0.. .... = V6: IPv6 address not present" size="1" pos="128"/>
+        <field name="gtpv2.f_teid_interface_type" showname="..00 0110 = Interface Type: S5/S8 SGW GTP-C interface (6)" size="1" pos="128"/>
+        <field name="gtpv2.f_teid_gre_key" showname="TEID/GRE Key: 0x2c7f014f" size="4" pos="129"/>
+        <field name="gtpv2.f_teid_ipv4" showname="F-TEID IPv4: 221.177.175.12 (221.177.175.12)" size="4" pos="133"/>
+      </field>
+      <field name="" showname="Access Point Name (APN) : cmnet.mnc000.mcc460.gprs" size="29" pos="137">
+        <field name="gtpv2.ie_type" showname="IE Type: Access Point Name (APN) (71)" size="1" pos="137"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 25" size="2" pos="138"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="140"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="140"/>
+        <field name="gtpv2.apn" showname="APN (Access Point Name): cmnet.mnc000.mcc460.gprs" size="25" pos="141"/>
+      </field>
+      <field name="" showname="Charging Characteristics : " size="6" pos="166">
+        <field name="gtpv2.ie_type" showname="IE Type: Charging Characteristics (95)" size="1" pos="166"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 2" size="2" pos="167"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="169"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="169"/>
+        <field name="gtpv2.charging_characteristic" showname="0000 0100 0000 0000 = Charging Characteristic: 0x0400" size="2" pos="170"/>
+      </field>
+      <field name="" showname="Selection Mode : MS or network provided APN, subscribed verified" size="5" pos="172">
+        <field name="gtpv2.ie_type" showname="IE Type: Selection Mode (128)" size="1" pos="172"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="173"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="175"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="175"/>
+        <field name="gtpv2.selec_mode" showname=".... ..00 = Selection Mode: MS or network provided APN, subscribed verified (0)" size="1" pos="176"/>
+      </field>
+      <field name="" showname="PDN Type : IPv4" size="5" pos="177">
+        <field name="gtpv2.ie_type" showname="IE Type: PDN Type (99)" size="1" pos="177"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="178"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="180"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="180"/>
+        <field name="gtpv2.spare_bits" showname="0000 0... = Spare bit(s): 0" size="1" pos="181"/>
+        <field name="gtpv2.pdn_type" showname=".... .001 = PDN Type: IPv4 (1)" size="1" pos="181"/>
+      </field>
+      <field name="" showname="PDN Address Allocation (PAA) : " size="9" pos="182">
+        <field name="gtpv2.ie_type" showname="IE Type: PDN Address Allocation (PAA) (79)" size="1" pos="182"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 5" size="2" pos="183"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="185"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="185"/>
+        <field name="gtpv2.pdn_type" showname=".... .001 = PDN Type: IPv4 (1)" size="1" pos="186"/>
+        <field name="gtpv2.pdn_addr_and_prefix.ipv4" showname="PDN Address and Prefix(IPv4): 0.0.0.0 (0.0.0.0)" size="4" pos="187"/>
+      </field>
+      <field name="" showname="APN Restriction : value 0" size="5" pos="191">
+        <field name="gtpv2.ie_type" showname="IE Type: APN Restriction (127)" size="1" pos="191"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="192"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="194"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="194"/>
+        <field name="gtpv2.apn_rest" showname="APN Restriction: 0" size="1" pos="195"/>
+      </field>
+      <field name="" showname="Aggregate Maximum Bit Rate (AMBR) : " size="12" pos="196">
+        <field name="gtpv2.ie_type" showname="IE Type: Aggregate Maximum Bit Rate (AMBR) (72)" size="1" pos="196"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 8" size="2" pos="197"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="199"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="199"/>
+        <field name="gtpv2.ambr_up" showname="AMBR Uplink (Aggregate Maximum Bit Rate for Uplink): 838860" size="4" pos="200"/>
+        <field name="gtpv2.ambr_down" showname="AMBR Downlink(Aggregate Maximum Bit Rate for Downlink): 838860" size="4" pos="204"/>
+      </field>
+      <field name="" showname="Protocol Configuration Options (PCO) : " size="33" pos="208">
+        <field name="gtpv2.ie_type" showname="IE Type: Protocol Configuration Options (PCO) (78)" size="1" pos="208"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 29" size="2" pos="209"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="211"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="211"/>
+        <field name="gsm_a.gm.sm.link_dir" showname="Link direction: MS to network (0)" size="0" pos="212"/>
+        <field name="gsm_a.gm.sm.ext" showname="1... .... = Extension: True" size="1" pos="212"/>
+        <field name="" showname="Configuration Protocol: PPP for use with IP PDP type or IP PDN type (0)" size="1" pos="212"/>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: Internet Protocol Control Protocol (0x8021)" size="2" pos="213">
+          <field name="" showname="Length: 0x10 (16)" size="1" pos="215"/>
+          <proto name="ipcp" showname="PPP IP Control Protocol" size="16" pos="216">
+            <field name="ppp.code" showname="Code: Configuration Request (1)" size="1" pos="216"/>
+            <field name="ppp.identifier" showname="Identifier: 0 (0x00)" size="1" pos="217"/>
+            <field name="ppp.length" showname="Length: 16" size="2" pos="218"/>
+            <field name="" showname="Options: (12 bytes), Primary DNS Server IP Address, Secondary DNS Server IP Address" size="12" pos="220">
+              <field name="" showname="Primary DNS Server IP Address: 0.0.0.0" size="6" pos="220">
+                <field name="ipcp.opt.type" showname="Type: Primary DNS Server IP Address (129)" size="1" pos="220"/>
+                <field name="ipcp.opt.length" showname="Length: 6" size="1" pos="221"/>
+                <field name="ipcp.opt.pri_dns_address" showname="Primary DNS Address: 0.0.0.0 (0.0.0.0)" size="4" pos="222"/>
+              </field>
+              <field name="" showname="Secondary DNS Server IP Address: 0.0.0.0" size="6" pos="226">
+                <field name="ipcp.opt.type" showname="Type: Secondary DNS Server IP Address (131)" size="1" pos="226"/>
+                <field name="ipcp.opt.length" showname="Length: 6" size="1" pos="227"/>
+                <field name="ipcp.opt.sec_dns_address" showname="Secondary DNS Address: 0.0.0.0 (0.0.0.0)" size="4" pos="228"/>
+              </field>
+            </field>
+          </proto>
+        </field>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: DNS Server IPv4 Address Request (0x000d)" size="2" pos="232">
+          <field name="" showname="Length: 0x00 (0)" size="1" pos="234"/>
+        </field>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: IP address allocation via NAS signalling (0x000a)" size="2" pos="235">
+          <field name="" showname="Length: 0x00 (0)" size="1" pos="237"/>
+        </field>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: IPv4 Link MTU Request (0x0010)" size="2" pos="238">
+          <field name="" showname="Length: 0x00 (0)" size="1" pos="240"/>
+        </field>
+      </field>
+      <field name="" showname="Bearer Context : [Grouped IE]" size="48" pos="241">
+        <field name="gtpv2.ie_type" showname="IE Type: Bearer Context (93)" size="1" pos="241"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 44" size="2" pos="242"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="244"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="244"/>
+        <field name="" showname="EPS Bearer ID (EBI) : 5" size="5" pos="245">
+          <field name="gtpv2.ie_type" showname="IE Type: EPS Bearer ID (EBI) (73)" size="1" pos="245"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="246"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="248"/>
+          <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="248"/>
+          <field name="gtpv2.spare_bits" showname="0000 .... = Spare bit(s): 0" size="1" pos="249"/>
+          <field name="gtpv2.ebi" showname=".... 0101 = EPS Bearer ID (EBI): 5" size="1" pos="249"/>
+        </field>
+        <field name="" showname="Fully Qualified Tunnel Endpoint Identifier (F-TEID) : S5/S8 SGW GTP-U interface, TEID/GRE Key: 0x2c5c8dfd, IPv4 221.177.175.13" size="13" pos="250">
+          <field name="gtpv2.ie_type" showname="IE Type: Fully Qualified Tunnel Endpoint Identifier (F-TEID) (87)" size="1" pos="250"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 9" size="2" pos="251"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="253"/>
+          <field name="gtpv2.instance" showname=".... 0010 = Instance: 2" size="1" pos="253"/>
+          <field name="gtpv2.f_teid_v4" showname="1... .... = V4: IPv4 address present" size="1" pos="254"/>
+          <field name="gtpv2.f_teid_v6" showname=".0.. .... = V6: IPv6 address not present" size="1" pos="254"/>
+          <field name="gtpv2.f_teid_interface_type" showname="..00 0100 = Interface Type: S5/S8 SGW GTP-U interface (4)" size="1" pos="254"/>
+          <field name="gtpv2.f_teid_gre_key" showname="TEID/GRE Key: 0x2c5c8dfd" size="4" pos="255"/>
+          <field name="gtpv2.f_teid_ipv4" showname="F-TEID IPv4: 221.177.175.13 (221.177.175.13)" size="4" pos="259"/>
+        </field>
+        <field name="" showname="Bearer Level Quality of Service (Bearer QoS) : " size="26" pos="263">
+          <field name="gtpv2.ie_type" showname="IE Type: Bearer Level Quality of Service (Bearer QoS) (80)" size="1" pos="263"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 22" size="2" pos="264"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="266"/>
+          <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="266"/>
+          <field name="gtpv2.bearer_qos_pvi" showname=".... ...0 = PVI (Pre-emption Vulnerability): Enabled" size="1" pos="267"/>
+          <field name="gtpv2.bearer_qos_pl" showname="..00 01.. = PL (Priority Level): 1" size="1" pos="267"/>
+          <field name="gtpv2.bearer_qos_pci" showname=".1.. .... = PCI (Pre-emption Capability): Disabled" size="1" pos="267"/>
+          <field name="gtpv2.bearer_qos_label_qci" showname="Label (QCI): 6" size="1" pos="268"/>
+          <field name="gtpv2.bearer_qos_mbr_up" showname="Maximum Bit Rate For Uplink: 0" size="5" pos="269"/>
+          <field name="gtpv2.bearer_qos_mbr_down" showname="Maximum Bit Rate For Downlink: 0" size="5" pos="274"/>
+          <field name="gtpv2.bearer_qos_gbr_up" showname="Guaranteed Bit Rate For Uplink: 0" size="5" pos="279"/>
+          <field name="gtpv2.bearer_qos_gbr_down" showname="Guaranteed Bit Rate For Downlink: 0" size="5" pos="284"/>
+        </field>
+      </field>
+      <field name="" showname="Recovery (Restart Counter) : 7" size="5" pos="289">
+        <field name="gtpv2.ie_type" showname="IE Type: Recovery (Restart Counter) (3)" size="1" pos="289"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="290"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="292"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="292"/>
+        <field name="gtpv2.rec" showname="Restart Counter: 7" size="1" pos="293"/>
+      </field>
+      <field name="" showname="UE Time Zone : " size="6" pos="294">
+        <field name="gtpv2.ie_type" showname="IE Type: UE Time Zone (114)" size="1" pos="294"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 2" size="2" pos="295"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="297"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="297"/>
+        <field name="" showname="Timezone: GMT + 8 hours 0 minutes" size="1" pos="298"/>
+        <field name="gtpv2.ue_time_zone_dst" showname=".... ..00 = Daylight Saving Time: No Adjustments for Daylight Saving Time (0)" size="1" pos="299"/>
+      </field>
+  </field>
+</proto>
+
+<Frame len="335">
+00 22 93 78 59 cf 4c 09 b4 fd 70 71 08 00 45 00
+01 1e 67 5d 00 00 fe 11 3a f8 dd b1 af 0c dd b1
+af 09 08 4b 08 4b 01 0a 5e 24 48 20 00 fe 00 00
+00 00 33 aa db 00 01 00 08 00 64 00 50 61 74 79
+69 f6 4c 00 07 00 68 31 79 94 08 47 f3 4b 00 08
+00 68 95 28 20 92 62 53 00 56 00 0d 00 18 64 f0
+00 e3 64 64 f0 00 07 3a 2e 02 53 00 03 00 64 f0
+00 52 00 01 00 06 4d 00 02 00 00 08 57 00 09 00
+86 2c 7f 01 4f dd b1 af 0c 47 00 19 00 05 63 6d
+6e 65 74 06 6d 6e 63 30 30 30 06 6d 63 63 34 36
+30 04 67 70 72 73 5f 00 02 00 04 00 80 00 01 00
+00 63 00 01 00 01 4f 00 05 00 01 00 00 00 00 7f
+00 01 00 00 48 00 08 00 00 0c cc cc 00 0c cc cc
+4e 00 1d 00 80 80 21 10 01 00 00 10 81 06 00 00
+00 00 83 06 00 00 00 00 00 0d 00 00 0a 00 00 10
+00 5d 00 2c 00 49 00 01 00 05 57 00 09 02 84 2c
+5c 8d fd dd b1 af 0d 50 00 16 00 44 06 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 03 00 01 00 07 72 00 02 00 23 00 13 a2 ae 22
+90 5a 49 88 23 21 fe 01 78 00 0c 81 61 00 c0 01
+66 13 00 00 00 00 00 00 01 01 a9 0f 00 00 01
+</Frame>
+<Color color="1" />
+<Interface intf="4009" />
+<Direction direction="1" />
+<Binary bid="4966" />
+</packet>
+
+<packet id="3">
+<brief time="2015-07-03 09:25:46.196389" src="221.177.175.9" dst="221.177.175.12" protocol="GTPv2" length="207" info="Create Session Response " />
+  <proto name="frame" showname="Frame 3: 207 bytes on wire (1656 bits), 207 bytes captured (1656 bits)" size="207" pos="0">
+    <field name="frame.encap_type" showname="Encapsulation type: Ethernet (1)" size="0" pos="0"/>
+    <field name="frame.time" showname="Arrival Time: Jul  3, 2015 09:25:46.196389000 CST" size="0" pos="0"/>
+    <field name="frame.offset_shift" showname="Time shift for this packet: 0.000000000 seconds" size="0" pos="0"/>
+    <field name="frame.time_epoch" showname="Epoch Time: 1435886746.196389000 seconds" size="0" pos="0"/>
+    <field name="frame.time_delta" showname="Time delta from previous captured frame: 0.031238000 seconds" size="0" pos="0"/>
+    <field name="frame.time_delta_displayed" showname="Time delta from previous displayed frame: 0.031238000 seconds" size="0" pos="0"/>
+    <field name="frame.time_relative" showname="Time since reference or first frame: 0.031244000 seconds" size="0" pos="0"/>
+    <field name="frame.number" showname="Frame Number: 3" size="0" pos="0"/>
+    <field name="frame.len" showname="Frame Length: 207 bytes (1656 bits)" size="0" pos="0"/>
+    <field name="frame.cap_len" showname="Capture Length: 207 bytes (1656 bits)" size="0" pos="0"/>
+    <field name="frame.marked" showname="Frame is marked: False" size="0" pos="0"/>
+    <field name="frame.ignored" showname="Frame is ignored: False" size="0" pos="0"/>
+    <field name="frame.protocols" showname="Protocols in frame: eth:ip:udp:gtp:gtpv2:ipcp" size="0" pos="0"/>
+  </proto>
+  <proto name="eth" showname="Ethernet II, Src: Zte_78:59:cf (00:22:93:78:59:cf), Dst: Zte_fd:70:71 (4c:09:b4:fd:70:71)" size="14" pos="0">
+    <field name="eth.dst" showname="Destination: Zte_fd:70:71 (4c:09:b4:fd:70:71)" size="6" pos="0">
+      <field name="eth.addr" showname="Address: Zte_fd:70:71 (4c:09:b4:fd:70:71)" size="6" pos="0"/>
+      <field name="eth.lg" showname=".... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)" size="3" pos="0"/>
+      <field name="eth.ig" showname=".... ...0 .... .... .... .... = IG bit: Individual address (unicast)" size="3" pos="0"/>
+    </field>
+    <field name="eth.src" showname="Source: Zte_78:59:cf (00:22:93:78:59:cf)" size="6" pos="6">
+      <field name="eth.addr" showname="Address: Zte_78:59:cf (00:22:93:78:59:cf)" size="6" pos="6"/>
+      <field name="eth.lg" showname=".... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)" size="3" pos="6"/>
+      <field name="eth.ig" showname=".... ...0 .... .... .... .... = IG bit: Individual address (unicast)" size="3" pos="6"/>
+    </field>
+    <field name="eth.type" showname="Type: IP (0x0800)" size="2" pos="12"/>
+    <field name="eth.trailer" showname="Trailer: d22f47db00d40479882321fe0180000c816e00c001661300..." size="32" pos="171"/>
+    <field name="eth.fcs" showname="Frame check sequence: 0x0f000001 [incorrect, should be 0x45cfea0e]" size="4" pos="203">
+      <field name="eth.fcs_good" showname="FCS Good: False" size="4" pos="203"/>
+      <field name="eth.fcs_bad" showname="FCS Bad: True" size="4" pos="203">
+        <field name="expert" showname="Expert Info (Error/Checksum): Bad checksum" size="0" pos="203">
+          <field name="expert.message" showname="Message: Bad checksum" size="0" pos="0"/>
+          <field name="expert.severity" showname="Severity level: Error" size="0" pos="0"/>
+          <field name="expert.group" showname="Group: Checksum" size="0" pos="0"/>
+        </field>
+      </field>
+    </field>
+  </proto>
+  <proto name="ip" showname="Internet Protocol Version 4, Src: 221.177.175.9 (221.177.175.9), Dst: 221.177.175.12 (221.177.175.12)" size="20" pos="14">
+    <field name="ip.version" showname="Version: 4" size="1" pos="14"/>
+    <field name="ip.hdr_len" showname="Header length: 20 bytes" size="1" pos="14"/>
+    <field name="ip.dsfield" showname="Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))" size="1" pos="15">
+      <field name="ip.dsfield.dscp" showname="0000 00.. = Differentiated Services Codepoint: Default (0x00)" size="1" pos="15"/>
+      <field name="ip.dsfield.ecn" showname=".... ..00 = Explicit Congestion Notification: Not-ECT (Not ECN-Capable Transport) (0x00)" size="1" pos="15"/>
+    </field>
+    <field name="ip.len" showname="Total Length: 157" size="2" pos="16"/>
+    <field name="ip.id" showname="Identification: 0x7d10 (32016)" size="2" pos="18"/>
+    <field name="ip.flags" showname="Flags: 0x00" size="1" pos="20">
+      <field name="ip.flags.rb" showname="0... .... = Reserved bit: Not set" size="1" pos="20"/>
+      <field name="ip.flags.df" showname=".0.. .... = Don&apos;t fragment: Not set" size="1" pos="20"/>
+      <field name="ip.flags.mf" showname="..0. .... = More fragments: Not set" size="1" pos="20"/>
+    </field>
+    <field name="ip.frag_offset" showname="Fragment offset: 0" size="2" pos="20"/>
+    <field name="ip.ttl" showname="Time to live: 255" size="1" pos="22"/>
+    <field name="ip.proto" showname="Protocol: UDP (17)" size="1" pos="23"/>
+    <field name="ip.checksum" showname="Header checksum: 0x24c6 [validation disabled]" size="2" pos="24">
+      <field name="ip.checksum_good" showname="Good: False" size="2" pos="24"/>
+      <field name="ip.checksum_bad" showname="Bad: False" size="2" pos="24"/>
+    </field>
+    <field name="ip.src" showname="Source: 221.177.175.9 (221.177.175.9)" size="4" pos="26"/>
+    <field name="ip.addr" showname="Source or Destination Address: 221.177.175.9 (221.177.175.9)" hide="yes" size="4" pos="26"/>
+    <field name="ip.src_host" showname="Source Host: 221.177.175.9" hide="yes" size="4" pos="26"/>
+    <field name="ip.host" showname="Source or Destination Host: 221.177.175.9" hide="yes" size="4" pos="26"/>
+    <field name="ip.dst" showname="Destination: 221.177.175.12 (221.177.175.12)" size="4" pos="30"/>
+    <field name="ip.addr" showname="Source or Destination Address: 221.177.175.12 (221.177.175.12)" hide="yes" size="4" pos="30"/>
+    <field name="ip.dst_host" showname="Destination Host: 221.177.175.12" hide="yes" size="4" pos="30"/>
+    <field name="ip.host" showname="Source or Destination Host: 221.177.175.12" hide="yes" size="4" pos="30"/>
+    <field name="" showname="Source GeoIP: Unknown" size="4" pos="26"/>
+    <field name="" showname="Destination GeoIP: Unknown" size="4" pos="30"/>
+  </proto>
+  <proto name="udp" showname="User Datagram Protocol, Src Port: gtp-control (2123), Dst Port: gtp-control (2123)" size="8" pos="34">
+    <field name="udp.srcport" showname="Source port: gtp-control (2123)" size="2" pos="34"/>
+    <field name="udp.dstport" showname="Destination port: gtp-control (2123)" size="2" pos="36"/>
+    <field name="udp.port" showname="Source or Destination Port: 2123" hide="yes" size="2" pos="34"/>
+    <field name="udp.port" showname="Source or Destination Port: 2123" hide="yes" size="2" pos="36"/>
+    <field name="udp.length" showname="Length: 137" size="2" pos="38"/>
+    <field name="udp.checksum_coverage" showname="Checksum coverage: 137" hide="yes" size="0" pos="38"/>
+    <field name="udp.checksum" showname="Checksum: 0x6e86 [validation disabled]" size="2" pos="40">
+      <field name="udp.checksum_good" showname="Good Checksum: False" size="2" pos="40"/>
+      <field name="udp.checksum_bad" showname="Bad Checksum: False" size="2" pos="40"/>
+    </field>
+  </proto>
+  <proto name="gtpv2" showname="GPRS Tunneling Protocol V2" size="129" pos="42"/>
+  <proto name="fake-field-wrapper">
+    <field name="" showname="Create Session Response" size="129" pos="42">
+      <field name="gtpv2.flags" showname="Flags: 0x48" size="1" pos="42">
+        <field name="gtpv2.version" showname="010. .... = Version: 2" size="1" pos="42"/>
+        <field name="gtpv2.p" showname="...0 .... = Piggybacking flag (P): 0" size="1" pos="42"/>
+        <field name="gtpv2.t" showname=".... 1... = TEID flag (T): 1" size="1" pos="42"/>
+      </field>
+      <field name="gtpv2.message_type" showname="Message Type: Create Session Response (33)" size="1" pos="43"/>
+      <field name="gtpv2.msg_lengt" showname="Message Length: 125" size="2" pos="44"/>
+      <field name="gtpv2.teid" showname="Tunnel Endpoint Identifier: 746520911" size="4" pos="46"/>
+      <field name="gtpv2.seq" showname="Sequence Number: 3386075" size="3" pos="50"/>
+      <field name="gtpv2.spare" showname="Spare: 0" size="1" pos="53"/>
+      <field name="" showname="Cause : Request accepted (16)" size="6" pos="54">
+        <field name="gtpv2.ie_type" showname="IE Type: Cause (2)" size="1" pos="54"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 2" size="2" pos="55"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="57"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="57"/>
+        <field name="gtpv2.cause" showname="Cause: Request accepted (16)" size="1" pos="58"/>
+        <field name="gtpv2.spare_bits" showname="0000 0... = Spare bit(s): 0" size="1" pos="59"/>
+        <field name="gtpv2.pce" showname=".... .0.. = PCE (PDN Connection IE Error): False" size="1" pos="59"/>
+        <field name="gtpv2.bce" showname=".... ..0. = BCE (Bearer Context IE Error): False" size="1" pos="59"/>
+        <field name="gtpv2.cs" showname=".... ...0 = CS (Cause Source): Originated by node sending the message" size="1" pos="59"/>
+      </field>
+      <field name="" showname="Fully Qualified Tunnel Endpoint Identifier (F-TEID) : S5/S8 PGW GTP-C interface, TEID/GRE Key: 0x76c1014e, IPv4 221.177.175.9" size="13" pos="60">
+        <field name="gtpv2.ie_type" showname="IE Type: Fully Qualified Tunnel Endpoint Identifier (F-TEID) (87)" size="1" pos="60"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 9" size="2" pos="61"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="63"/>
+        <field name="gtpv2.instance" showname=".... 0001 = Instance: 1" size="1" pos="63"/>
+        <field name="gtpv2.f_teid_v4" showname="1... .... = V4: IPv4 address present" size="1" pos="64"/>
+        <field name="gtpv2.f_teid_v6" showname=".0.. .... = V6: IPv6 address not present" size="1" pos="64"/>
+        <field name="gtpv2.f_teid_interface_type" showname="..00 0111 = Interface Type: S5/S8 PGW GTP-C interface (7)" size="1" pos="64"/>
+        <field name="gtpv2.f_teid_gre_key" showname="TEID/GRE Key: 0x76c1014e" size="4" pos="65"/>
+        <field name="gtpv2.f_teid_ipv4" showname="F-TEID IPv4: 221.177.175.9 (221.177.175.9)" size="4" pos="69"/>
+      </field>
+      <field name="" showname="PDN Address Allocation (PAA) : " size="9" pos="73">
+        <field name="gtpv2.ie_type" showname="IE Type: PDN Address Allocation (PAA) (79)" size="1" pos="73"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 5" size="2" pos="74"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="76"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="76"/>
+        <field name="gtpv2.pdn_type" showname=".... .001 = PDN Type: IPv4 (1)" size="1" pos="77"/>
+        <field name="gtpv2.pdn_addr_and_prefix.ipv4" showname="PDN Address and Prefix(IPv4): 10.29.243.145 (10.29.243.145)" size="4" pos="78"/>
+      </field>
+      <field name="" showname="APN Restriction : value 0" size="5" pos="82">
+        <field name="gtpv2.ie_type" showname="IE Type: APN Restriction (127)" size="1" pos="82"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="83"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="85"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="85"/>
+        <field name="gtpv2.apn_rest" showname="APN Restriction: 0" size="1" pos="86"/>
+      </field>
+      <field name="" showname="Protocol Configuration Options (PCO) : " size="38" pos="87">
+        <field name="gtpv2.ie_type" showname="IE Type: Protocol Configuration Options (PCO) (78)" size="1" pos="87"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 34" size="2" pos="88"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="90"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="90"/>
+        <field name="gsm_a.gm.sm.link_dir" showname="Link direction: Network to MS (1)" size="0" pos="91"/>
+        <field name="gsm_a.gm.sm.ext" showname="1... .... = Extension: True" size="1" pos="91"/>
+        <field name="" showname="Configuration Protocol: PPP for use with IP PDP type or IP PDN type (0)" size="1" pos="91"/>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: Internet Protocol Control Protocol (0x8021)" size="2" pos="92">
+          <field name="" showname="Length: 0x10 (16)" size="1" pos="94"/>
+          <proto name="ipcp" showname="PPP IP Control Protocol" size="16" pos="95">
+            <field name="ppp.code" showname="Code: Configuration Nak (3)" size="1" pos="95"/>
+            <field name="ppp.identifier" showname="Identifier: 0 (0x00)" size="1" pos="96"/>
+            <field name="ppp.length" showname="Length: 16" size="2" pos="97"/>
+            <field name="" showname="Options: (12 bytes), Primary DNS Server IP Address, Secondary DNS Server IP Address" size="12" pos="99">
+              <field name="" showname="Primary DNS Server IP Address: 111.8.14.18" size="6" pos="99">
+                <field name="ipcp.opt.type" showname="Type: Primary DNS Server IP Address (129)" size="1" pos="99"/>
+                <field name="ipcp.opt.length" showname="Length: 6" size="1" pos="100"/>
+                <field name="ipcp.opt.pri_dns_address" showname="Primary DNS Address: 111.8.14.18 (111.8.14.18)" size="4" pos="101"/>
+              </field>
+              <field name="" showname="Secondary DNS Server IP Address: 211.142.210.98" size="6" pos="105">
+                <field name="ipcp.opt.type" showname="Type: Secondary DNS Server IP Address (131)" size="1" pos="105"/>
+                <field name="ipcp.opt.length" showname="Length: 6" size="1" pos="106"/>
+                <field name="ipcp.opt.sec_dns_address" showname="Secondary DNS Address: 211.142.210.98 (211.142.210.98)" size="4" pos="107"/>
+              </field>
+            </field>
+          </proto>
+        </field>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: DNS Server IPv4 Address (0x000d)" size="2" pos="111">
+          <field name="" showname="Length: 0x04 (4)" size="1" pos="113"/>
+          <field name="" showname="IPv4: 111.8.14.18" size="4" pos="114"/>
+        </field>
+        <field name="gsm_a.gm.sm.pco_pid" showname="Protocol or Container ID: DNS Server IPv4 Address (0x000d)" size="2" pos="118">
+          <field name="" showname="Length: 0x04 (4)" size="1" pos="120"/>
+          <field name="" showname="IPv4: 211.142.210.98" size="4" pos="121"/>
+        </field>
+      </field>
+      <field name="" showname="Bearer Context : [Grouped IE]" size="41" pos="125">
+        <field name="gtpv2.ie_type" showname="IE Type: Bearer Context (93)" size="1" pos="125"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 37" size="2" pos="126"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="128"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="128"/>
+        <field name="" showname="EPS Bearer ID (EBI) : 5" size="5" pos="129">
+          <field name="gtpv2.ie_type" showname="IE Type: EPS Bearer ID (EBI) (73)" size="1" pos="129"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="130"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="132"/>
+          <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="132"/>
+          <field name="gtpv2.spare_bits" showname="0000 .... = Spare bit(s): 0" size="1" pos="133"/>
+          <field name="gtpv2.ebi" showname=".... 0101 = EPS Bearer ID (EBI): 5" size="1" pos="133"/>
+        </field>
+        <field name="" showname="Cause : Request accepted (16)" size="6" pos="134">
+          <field name="gtpv2.ie_type" showname="IE Type: Cause (2)" size="1" pos="134"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 2" size="2" pos="135"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="137"/>
+          <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="137"/>
+          <field name="gtpv2.cause" showname="Cause: Request accepted (16)" size="1" pos="138"/>
+          <field name="gtpv2.spare_bits" showname="0000 0... = Spare bit(s): 0" size="1" pos="139"/>
+          <field name="gtpv2.pce" showname=".... .0.. = PCE (PDN Connection IE Error): False" size="1" pos="139"/>
+          <field name="gtpv2.bce" showname=".... ..0. = BCE (Bearer Context IE Error): False" size="1" pos="139"/>
+          <field name="gtpv2.cs" showname=".... ...0 = CS (Cause Source): Originated by node sending the message" size="1" pos="139"/>
+        </field>
+        <field name="" showname="Fully Qualified Tunnel Endpoint Identifier (F-TEID) : S5/S8 PGW GTP-U interface, TEID/GRE Key: 0x76f901ed, IPv4 221.177.175.10" size="13" pos="140">
+          <field name="gtpv2.ie_type" showname="IE Type: Fully Qualified Tunnel Endpoint Identifier (F-TEID) (87)" size="1" pos="140"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 9" size="2" pos="141"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="143"/>
+          <field name="gtpv2.instance" showname=".... 0010 = Instance: 2" size="1" pos="143"/>
+          <field name="gtpv2.f_teid_v4" showname="1... .... = V4: IPv4 address present" size="1" pos="144"/>
+          <field name="gtpv2.f_teid_v6" showname=".0.. .... = V6: IPv6 address not present" size="1" pos="144"/>
+          <field name="gtpv2.f_teid_interface_type" showname="..00 0101 = Interface Type: S5/S8 PGW GTP-U interface (5)" size="1" pos="144"/>
+          <field name="gtpv2.f_teid_gre_key" showname="TEID/GRE Key: 0x76f901ed" size="4" pos="145"/>
+          <field name="gtpv2.f_teid_ipv4" showname="F-TEID IPv4: 221.177.175.10 (221.177.175.10)" size="4" pos="149"/>
+        </field>
+        <field name="" showname="Charging ID : " size="8" pos="153">
+          <field name="gtpv2.ie_type" showname="IE Type: Charging ID (94)" size="1" pos="153"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 4" size="2" pos="154"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="156"/>
+          <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="156"/>
+          <field name="gtpv2.charging_id" showname="Charging id: 1993277933" size="4" pos="157"/>
+        </field>
+        <field name="" showname="Bearer Flags : " size="5" pos="161">
+          <field name="gtpv2.ie_type" showname="IE Type: Bearer Flags (97)" size="1" pos="161"/>
+          <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="162"/>
+          <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="164"/>
+          <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="164"/>
+          <field name="gtpv2.bearer_flag.ppc" showname=".... ...0 = PPC (Prohibit Payload Compression): False" size="1" pos="165"/>
+          <field name="gtpv2.bearer_flag.vb" showname=".... ..0. = VB (Voice Bearer): False" size="1" pos="165"/>
+        </field>
+      </field>
+      <field name="" showname="Recovery (Restart Counter) : 5" size="5" pos="166">
+        <field name="gtpv2.ie_type" showname="IE Type: Recovery (Restart Counter) (3)" size="1" pos="166"/>
+        <field name="gtpv2.ie_len" showname="IE Length: 1" size="2" pos="167"/>
+        <field name="gtpv2.cr" showname="0000 .... = CR flag: 0" size="1" pos="169"/>
+        <field name="gtpv2.instance" showname=".... 0000 = Instance: 0" size="1" pos="169"/>
+        <field name="gtpv2.rec" showname="Restart Counter: 5" size="1" pos="170"/>
+      </field>
+  </field>
+</proto>
+
+<Frame len="207">
+4c 09 b4 fd 70 71 00 22 93 78 59 cf 08 00 45 00
+00 9d 7d 10 00 00 ff 11 24 c6 dd b1 af 09 dd b1
+af 0c 08 4b 08 4b 00 89 6e 86 48 21 00 7d 2c 7f
+01 4f 33 aa db 00 02 00 02 00 10 00 57 00 09 01
+87 76 c1 01 4e dd b1 af 09 4f 00 05 00 01 0a 1d
+f3 91 7f 00 01 00 00 4e 00 22 00 80 80 21 10 03
+00 00 10 81 06 6f 08 0e 12 83 06 d3 8e d2 62 00
+0d 04 6f 08 0e 12 00 0d 04 d3 8e d2 62 5d 00 25
+00 49 00 01 00 05 02 00 02 00 10 00 57 00 09 02
+85 76 f9 01 ed dd b1 af 0a 5e 00 04 00 76 cf 01
+ed 61 00 01 00 00 03 00 01 00 05 d2 2f 47 db 00
+d4 04 79 88 23 21 fe 01 80 00 0c 81 6e 00 c0 01
+66 13 00 00 00 00 00 00 01 02 a9 0f 00 00 01
+</Frame>
+<Color color="1" />
+<Interface intf="4009" />
+<Direction direction="2" />
+<Binary bid="4966" />
+</packet>
+
+</pdml>
