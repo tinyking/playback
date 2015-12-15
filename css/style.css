@@ -41,22 +41,29 @@
 	width: 230px;
 	cursor: pointer;
 	text-align: center;
-	margin: 8px 8px 8px 78px;
+	margin: 8px 8px 8px 80px;
 }
-.graph .line {
+.line-box .line {
 	border-top: 1px #f00 solid;
 	height: 0px;
 }
-.graph .triangle {
+.line-box .triangle {
 	margin-top: -6px;
 	width: 0;
 	height: 0;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent;
 }
-.graph .left {
+.left .triangle{
 	border-right: 12px solid red;
 }
+
+.right .triangle {
+	float: right;
+	border-left: 12px solid red;
+
+}
+
 .graph .line-active {
 	border-top-width: 2px;
 }

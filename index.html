@@ -10,6 +10,7 @@
   <script type="text/javascript" src="jquery-easyui-1.4.4/jquery.min.js"></script>
   <script type="text/javascript" src="jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
   <script type="text/javascript" src="json.js"></script>
+  <script src="js/playback.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -28,139 +29,232 @@
         <div data-options="region:'center',title:'图',split:true,iconCls:'icon-tip'">
           <div class="easyui-tabs" fit="true">
             <div title="图形" style="padding:10px">
-                <div class="graph" style="overflow:hidden">
-        			<div class="back-layer" style="overflow:hidden; z-index:1;width: 100000px;">
-        			<table>
-        				<tr><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td></tr>
-        				<tr><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td></tr>
-        				<tr><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td></tr>
-        			</table>
-        			</div>
-        			<div class="line-layer">
-        				<div class="boxs">
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active" >
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				<div class="line-box active">
-        					<p class="time">1212122221</p>
-        					<div class="line line-active">
-        						<div class="triangle left"></div>
-        					</div>
-        					<p class="text">This is a text.</p>
-        				</div>
-        				</div>
-        			</div>
+              <div class="graph" style="overflow:hidden">
+                <div class="back-layer" style="overflow:hidden; z-index:1;width: 100000px;">
+                  <table>
+                    <tr>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <!-- <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td>
+                      <td>eNodeB</td> -->
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <!-- <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td>
+                      <td>
+                        <span class="icon-enodeb"></span>
+                      </td> -->
+                    </tr>
+                    <tr>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <!-- <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td>
+                      <td><i></i></td> -->
+                    </tr>
+                  </table>
+                </div>
+                <div class="line-layer">
+                  <div class="boxs">
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <!-- <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div>
+                    <div class="line-box active">
+                      <p class="time">1212122221</p>
+                      <div class="line line-active">
+                        <div class="triangle left"></div>
+                      </div>
+                      <p class="text">This is a text.</p>
+                    </div> -->
+                  </div>
+                </div>
 
-        		</div>
+              </div>
             </div>
             <div title="表格" style="padding:10px">
 
@@ -170,19 +264,19 @@
         <div data-options="region:'south',split:true,iconCls:'icon-tip'" title="二进制信息" style="height:300px;">
           <div class="easyui-tabs" fit="true">
             <div title="流程图" style="padding:10px">
-            <div class="easyui-layout" fit="true">
+              <div class="easyui-layout" fit="true">
                 <div data-options="region:'west',split:true,iconCls:'icon-tip'" style="width:400px;">
-                    <ul id="frameTree" class="easyui-tree" data-options="animate:true,lines:true"></ul>
+                  <ul id="frameTree" class="easyui-tree" data-options="animate:true,lines:true"></ul>
                 </div>
-                <div data-options="region:'center'" >
-                    <div class="bottom-right">
-                        <div class="line-number">
-                            <!-- <div class="row">
+                <div data-options="region:'center'">
+                  <div class="bottom-right">
+                    <div class="line-number">
+                      <!-- <div class="row">
                                 <span>0001</span>
                             </div> -->
-                        </div>
-                        <div class="hex">
-                            <!-- <div class="row">
+                    </div>
+                    <div class="hex">
+                      <!-- <div class="row">
                                 <span>01</span>
                                 <span>01</span>
                                 <span>01</span>
@@ -201,9 +295,9 @@
                                 <span>01</span>
                             </div> -->
 
-                        </div>
-                        <div class="ascii">
-                            <!-- <div class="row">
+                    </div>
+                    <div class="ascii">
+                      <!-- <div class="row">
                                 <span>.</span>
                                 <span>.</span>
                                 <span>.</span>
@@ -221,10 +315,10 @@
                                 <span>.</span>
                                 <span>.</span>
                             </div> -->
-                        </div>
                     </div>
+                  </div>
                 </div>
-            </div>
+              </div>
             </div>
             <div title="统计图" style="padding:10px">
             </div>
@@ -234,80 +328,83 @@
     </div>
   </div>
 
-<style media="screen">
+  <style media="screen">
     .bottom-right {
-        width: 600px;
-    }
-    .bottom-right>div{
-        float: left;
-        margin: 5px;
-        padding-right: 10px;
-    }
-    .bottom-right .row {
-        padding-top: 5px;
+      width: 600px;
     }
 
-    .bottom-right span{
-        min-width: 19px;
-        display: inline-block;
+    .bottom-right>div {
+      float: left;
+      margin: 5px;
+      padding-right: 10px;
     }
-    .bottom-right .ascii span{
-        min-width: 10px;
+
+    .bottom-right .row {
+      padding-top: 5px;
     }
-</style>
+
+    .bottom-right span {
+      min-width: 19px;
+      display: inline-block;
+    }
+
+    .bottom-right .ascii span {
+      min-width: 10px;
+    }
+  </style>
 
   <script>
     $(function() {
 
-    var rows = [{
+      var rows = [{
         name: "会话类型",
         value: "SIGNAL"
-    },{
+      }, {
         name: "接口类型",
         value: "S1(S6a|S6d)"
-    },{
+      }, {
         name: "手机号",
         value: "13800138000"
-    },{
+      }, {
         name: "终端型号",
         value: "未知"
-    },{
+      }, {
         name: "用户IP地址",
         value: "192.168.2.2"
-    },{
+      }, {
         name: "TAC-ECI",
         value: "17153-73880836"
-    },{
+      }, {
         name: "eNodeB IP",
         value: "100.86.31.203"
-    },{
+      }, {
         name: "MME IP",
         value: "100.86.31.203"
-    },{
+      }, {
         name: "Server IP",
         value: "100.86.31.203"
-    },{
+      }, {
         name: "数据流向",
         value: "-"
-    },{
+      }, {
         name: "承载协议",
         value: "-"
-    },{
+      }, {
         name: "业务类型",
         value: "-"
-    },{
+      }, {
         name: "漫游类型",
         value: "-"
-    },{
+      }, {
         name: "业务状态",
         value: "成功"
-    },{
+      }, {
         name: "状态码",
         value: "917"
-    },{
+      }, {
         name: "状态码描述",
         value: "UE reply Complete to NE."
-    }];
+      }];
 
       $('#edit').propertygrid({
 
@@ -331,96 +428,107 @@
 
 
       showFlowTree(data, 0);
-      refresh(data.packets[0].frame.value)
-  });
+      refresh(data.packets[0].frame.value);
 
-  function refresh(value) {
+      PlayBack.init(data);
+    });
+
+    function refresh(value) {
       var rows = value.split('\n');
       var lineNumber = $('.bottom-right .line-number').empty();
-      var hexDiv = $('.bottom-right .hex').empty(), asciiDiv = $('.bottom-right .ascii').empty();
+      var hexDiv = $('.bottom-right .hex').empty(),
+        asciiDiv = $('.bottom-right .ascii').empty();
 
       for (var i = 0, len = rows.length; i < len; i++) {
-          var hexRow = $('<div class="row" />'), asciiRow = $('<div class="row" />');
-          hexDiv.append(hexRow), asciiDiv.append(asciiRow);
+        var hexRow = $('<div class="row" />'),
+          asciiRow = $('<div class="row" />');
+        hexDiv.append(hexRow), asciiDiv.append(asciiRow);
 
-          processRow(hexRow, asciiRow, rows[i]);
-          lineNumber.append($('<div class="row" />').append('<span>' + getRowNumString(i) + '</span>'));
+        processRow(hexRow, asciiRow, rows[i]);
+        lineNumber.append($('<div class="row" />').append('<span>' + getRowNumString(i) + '</span>'));
 
       }
-  }
-
-  function processRow(hexRow, asciiRow, value) {
-      var vals = value.split(' ');
-      for (var i = 0, len = vals.length; i < len; i++) {
-          hexRow.append('<span>' + vals[i] + '</span>');
-          asciiRow.append('<span>' + getAsciiCode(vals[i]) + '</span>');
-      }
-
-  }
-
-  /**
-    * 格式化行号
-    */
-   function getRowNumString (rowIndex) {
-    	var hexRow = rowIndex.toString(16);
-    	switch(hexRow.length) {
-    	case 1:
-    		return "00" + hexRow + "0";
-    		break;
-    	case 2:
-    		return "0" + hexRow + "0";
-    		break;
-    	case 3:
-    		return "" + hexRow + "0";
-    		break;
-    	}
     }
 
-function getAsciiCode(hexCode) {
-    //return "E";
-	var tenI = parseInt(hexCode, 16);
-	if(tenI <= 31 || tenI >= 127) {
-		return ".";
-	}
-	switch(tenI) {
-		case 32:
-			//SPACE
-			return "&nbsp;";
-		default:
-			return String.fromCharCode(tenI);
-	}
-}
+    function processRow(hexRow, asciiRow, value) {
+      var vals = value.split(' ');
+      for (var i = 0, len = vals.length; i < len; i++) {
+        hexRow.append('<span>' + vals[i] + '</span>');
+        asciiRow.append('<span>' + getAsciiCode(vals[i]) + '</span>');
+      }
 
-  function showFlowTree(data, index) {
+    }
+
+    /**
+     * 格式化行号
+     */
+    function getRowNumString(rowIndex) {
+      var hexRow = rowIndex.toString(16);
+      switch (hexRow.length) {
+        case 1:
+          return "00" + hexRow + "0";
+          break;
+        case 2:
+          return "0" + hexRow + "0";
+          break;
+        case 3:
+          return "" + hexRow + "0";
+          break;
+      }
+    }
+
+    function getAsciiCode(hexCode) {
+      //return "E";
+      var tenI = parseInt(hexCode, 16);
+      if (tenI <= 31 || tenI >= 127) {
+        return ".";
+      }
+      switch (tenI) {
+        case 32:
+          //SPACE
+          return "&nbsp;";
+        default:
+          return String.fromCharCode(tenI);
+      }
+    }
+
+    function showFlowTree(data, index) {
       var treeData = [];
       var protos = data.packets[index].protos;
 
       var getChildren = function(index, proto) {
-          var children = [], fields = proto.fields;
-          if (!fields) {
-              return children;
-          }
-          for (var i in fields) {
-              var field = fields[i];
-              var d = {id: index+ '_' + i, text: field.showName};
-              if (field.size) {
-                d.pos = field.pos;
-                d.size = field.size;
-              }
-              children.push(d);
-              d.children = getChildren(i, field);
-          }
+        var children = [],
+          fields = proto.fields;
+        if (!fields) {
           return children;
+        }
+        for (var i in fields) {
+          var field = fields[i];
+          var d = {
+            id: index + '_' + i,
+            text: field.showName
+          };
+          if (field.size) {
+            d.pos = field.pos;
+            d.size = field.size;
+          }
+          children.push(d);
+          d.children = getChildren(i, field);
+        }
+        return children;
       };
       for (var i in protos) {
-          var proto = protos[i];
-          var d = {id: i, text: proto.showName};
-          if (proto.size) {
-            d.pos = proto.pos;
-            d.size = proto.size;
-          }
-          treeData.push(d);
-          d.children = getChildren(i, proto);
+        var proto = protos[i];
+        var d = {
+          id: i,
+          text: proto.showName
+        };
+        if (proto.size) {
+          d.pos = proto.pos;
+          d.size = proto.size;
+        }
+        treeData.push(d);
+        d.children = getChildren(i, proto);
       }
 
       console.log(treeData);
@@ -432,31 +540,31 @@ function getAsciiCode(hexCode) {
       });
 
 
-      var baseWidth = 300;
-      var margin_left_diff = 243;
-      $('.line-layer .line-box').each(function(index) {
-          $(this).css('marginLeft', parseInt($(this).css('marginLeft')) + margin_left_diff * index);
-      });
+      // var baseWidth = 300;
+      // var margin_left_diff = 243;
+      // $('.line-layer .line-box').each(function(index) {
+      //   $(this).css('marginLeft', parseInt($(this).css('marginLeft')) + margin_left_diff * index);
+      // });
+      //
+      //
+      // $('.line-layer .boxs').width(($('.line-layer .line-box').length + 0.5) * margin_left_diff);
+      //
+      // var lastScrollLeft = 0;
+      // $('.line-layer').scroll(function(event) {
+      //   /* Act on the event */
+      //   var _scrollLeft = $(this).scrollLeft();
+      //   if (lastScrollLeft != _scrollLeft) {
+      //     var back_layer = $('.back-layer');
+      //     $(back_layer).css('marginLeft', parseInt($(back_layer).css('marginLeft')) - (_scrollLeft - lastScrollLeft));
+      //     lastScrollLeft = _scrollLeft;
+      //   }
+      // });
+      //
+      // $('.graph table tr:eq(0)').find('td').each(function(index) {
+      //   console.log($(this).text($(this).text() + index));
+      // });
 
-
-      $('.line-layer .boxs').width(($('.line-layer .line-box').length + 0.5) * margin_left_diff);
-
-      var lastScrollLeft = 0;
-      $('.line-layer').scroll(function(event) {
-          /* Act on the event */
-          var _scrollLeft = $(this).scrollLeft();
-          if (lastScrollLeft != _scrollLeft) {
-              var back_layer = $('.back-layer');
-              $(back_layer).css('marginLeft', parseInt($(back_layer).css('marginLeft')) - (_scrollLeft - lastScrollLeft));
-              lastScrollLeft = _scrollLeft;
-          }
-      });
-
-      $('.graph table tr:eq(0)').find('td').each(function(index) {
-          console.log($(this).text($(this).text() + index));
-      });
-
-  }
+    }
   </script>
 </body>
 

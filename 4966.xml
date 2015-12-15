@@ -24,8 +24,7 @@
       <field name="eth.addr" showname="Address: Zte_fd:70:71 (4c:09:b4:fd:70:71)" size="6" pos="0"/>
       <field name="eth.lg" showname=".... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)" size="3" pos="0"/>
       <field name="eth.ig" showname=".... ...0 .... .... .... .... = IG bit: Individual address (unicast)" size="3" pos="0"/>
-    </field>
-    <field name="eth.src" showname="Source: Zte_78:5c:cf (00:22:93:78:5c:cf)" size="6" pos="6">
+    </field><fiel name="eth.src" showname="Source: Zte_78:5c:cf (00:22:93:78:5c:cf)">" pos="6">
       <field name="eth.addr" showname="Address: Zte_78:5c:cf (00:22:93:78:5c:cf)" size="6" pos="6"/>
       <field name="eth.lg" showname=".... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)" size="3" pos="6"/>
       <field name="eth.ig" showname=".... ...0 .... .... .... .... = IG bit: Individual address (unicast)" size="3" pos="6"/>

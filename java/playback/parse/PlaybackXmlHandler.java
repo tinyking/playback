@@ -22,7 +22,7 @@ import com.eflag.ocloud3.playback.model.Pdml;
 import com.eflag.ocloud3.playback.model.Proto;
 
 public class PlaybackXmlHandler extends DefaultHandler {
-	
+
 	static enum Node {
 		xml,
 		pdml,
@@ -36,12 +36,12 @@ public class PlaybackXmlHandler extends DefaultHandler {
 		Direction,
 		Binary
 		;
-		
-		
+
+
 		public static Node toNode(String name) {
 			Node node = xml;
 			for (Node n : Node.values()) {
-				if (n.name().equals(name)) { 
+				if (n.name().equals(name)) {
 					node = n;
 					break;
 				}
@@ -49,7 +49,7 @@ public class PlaybackXmlHandler extends DefaultHandler {
 			return node;
 		}
 	}
-	
+
 	static enum Attr {
 		version,
 		creator,
@@ -78,15 +78,15 @@ public class PlaybackXmlHandler extends DefaultHandler {
 	private boolean hasText = false;
 	private StringBuilder nodeText;
 	private int level = 0;
-	
+
 	private Map<Integer, Field> fieldMap = new HashMap<Integer, Field>();
-	
-	
+
+
 	@Override
 	public void startDocument() throws SAXException {
 		super.startDocument();
 	}
-	
+
 	@Override
 	public void endDocument() throws SAXException {
 		super.endDocument();
@@ -98,11 +98,11 @@ public class PlaybackXmlHandler extends DefaultHandler {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		super.startElement(uri, localName, qName, attributes);
-		
+
 		switch (Node.toNode(qName)) {
 		case pdml:
 			parsePdml(attributes);
@@ -141,7 +141,7 @@ public class PlaybackXmlHandler extends DefaultHandler {
 			break;
 		}
 	}
-	
+
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		super.endElement(uri, localName, qName);
@@ -173,7 +173,7 @@ public class PlaybackXmlHandler extends DefaultHandler {
 			break;
 		}
 	}
-	
+
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
 		super.characters(ch, start, length);
@@ -223,7 +223,7 @@ public class PlaybackXmlHandler extends DefaultHandler {
 			fieldMap.get(level - 1).addField(field);
 			fieldMap.put(level, field);
 		}
-		
+
 		field.setName(getValue(attributes, Attr.name));
 		field.setShowName(getValue(attributes, Attr.showname));
 		field.setSize(getIntValue(attributes, Attr.size));
@@ -245,8 +245,8 @@ public class PlaybackXmlHandler extends DefaultHandler {
 		Brief brief = new Brief();
 		brief.setTime(getValue(attributes, Attr.time));
 		brief.setSrc(getValue(attributes, Attr.src));
-		brief.setDst(getValue(attributes, Attr.src));
-		brief.setProtocol(getValue(attributes, Attr.src));
+		brief.setDst(getValue(attributes, Attr.dst));
+		brief.setProtocol(getValue(attributes, Attr.protocol));
 		brief.setLength(getIntValue(attributes, Attr.length));
 		brief.setInfo(getValue(attributes, Attr.info));
 		packet.setBrief(brief);
@@ -260,7 +260,7 @@ public class PlaybackXmlHandler extends DefaultHandler {
 		packet.setId(Integer.parseInt(attributes.getValue("id")));
 		pdml.addPacket(packet);
 	}
-	
+
 
 	private void parsePdml(Attributes attributes) {
 		pdml = new Pdml();
@@ -269,12 +269,12 @@ public class PlaybackXmlHandler extends DefaultHandler {
 		pdml.setTime(getValue(attributes, Attr.time));
 		pdml.setCaptureFile(getValue(attributes, Attr.capture_file));
 	}
-	
+
 
 	private String getValue(Attributes attributes, Attr attr) {
 		return attributes.getValue(attr.name());
 	}
-	
+
 	private int getIntValue(Attributes attributes, Attr attr) {
 		String value = getValue(attributes, attr);
 		try {
