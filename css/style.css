@@ -1,66 +1,88 @@
-html,body {
-	height: 98%;
-	/*margin: 0;*/
-
-}
-li {
-	list-style-type: none;
-	background: #f00;
-	width: 200px;
-	min-height: 50px;
-	float: left;
-}
-.graph{
+.graph {
 	height: 100%;
-	background: #eee;
+	/*background: #eee;*/
 }
 .graph>.back-layer, .graph>.line-layer {
 	float: left;
 }
-
-/*.net-element dl {
-	width: 100%;
+.graph table, .graph tr, .graph td {
+	text-align: center;
 }
-.net-element dt{
-	float:left;
-	width: 80px;
-	margin: 0 auto;
-	z-index: 1000;
-}
-.net-element dd {
-	width: 2px;
-	background: #cacaca;
-	position: absolute;
-	top: 60px;
-	bottom: 5px;
-	margin: 10px 34px;
-	float: left;
-}
-
-.net-element span {
+.graph table span {
+	display: block;
 	width: 32px;
 	height: 32px;
+	margin: 0 auto;
+}
+.graph td {
+	width: 120px;
+	padding-right: 120px;
+}
+.graph table i {
 	display: block;
+	width: 2px;
+	background: #cacaca;
+	margin: 0 auto;
+	height: 1000px;
+}
+.graph .line-layer {
+	float: left;
+	position: absolute;
+	top: 140px;
+	right: 10px;
+	bottom: 1px;
+	left: 1px;
+	overflow: auto;
+	/*background: #ccc;*/
+}
+.graph .line-box {
+	border-radius: 5px;
+	background: #ddd;
+	width: 230px;
+	cursor: pointer;
+	text-align: center;
+	margin: 8px 8px 8px 78px;
+}
+.graph .line {
+	border-top: 1px #f00 solid;
+	height: 0px;
+}
+.graph .triangle {
+	margin-top: -6px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+.graph .left {
+	border-right: 12px solid red;
+}
+.graph .line-active {
+	border-top-width: 2px;
+}
+.graph .dotted {
+	border-style: dotted;
 }
 
-.icon-enodeb span {
-	background: url(icons/eNodeB.png) no-repeat;
+/*定义图标*/
+.icon-default {
+	background: url(icons/default.png);
 }
-.icon-hss span {
-	background: url(icons/HSS.png) no-repeat;
+.icon-enodeb {
+	background: url(icons/eNodeB.png);
 }
-.icon-mme span {
-	background: url(icons/MME.png) no-repeat;
+.icon-hss {
+	background: url(icons/HSS.png);
 }
-.icon-msc span {
-	background: url(icons/MSC.png) no-repeat;
+.icon-mme {
+	background: url(icons/MME.png);
 }
-.icon-pgw span {
-	background: url(icons/PGW.png) no-repeat;
+.icon-msc {
+	background: url(icons/MSC.png);
 }
-.icon-default span {
-	background: url(icons/default.png) no-repeat;
+.icon-pgw {
+	background: url(icons/PGW.png);
 }
-.icon-ue span {
-	background: url(icons/ue.jpg) no-repeat;
-}*/
+.icon-ue {
+	background: url(icons/ue.jpg);
+}
