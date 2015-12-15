@@ -1,5 +1,5 @@
 html,body {
-	height: 90%;
+	height: 98%;
 	/*margin: 0;*/
 
 }
@@ -8,22 +8,23 @@ li {
 	background: #f00;
 	width: 200px;
 	min-height: 50px;
+	float: left;
 }
-.graph, .back-layer{
+.graph{
 	height: 100%;
 	background: #eee;
 }
-/*.graph>.back-layer, .graph>.line-layer {
+.graph>.back-layer, .graph>.line-layer {
+	float: left;
+}
 
-}*/
-
-.net-element dl {
-	margin: 0 auto;
+/*.net-element dl {
+	width: 100%;
 }
 .net-element dt{
 	float:left;
 	width: 80px;
-	margin-left: 20px;
+	margin: 0 auto;
 	z-index: 1000;
 }
 .net-element dd {
@@ -45,7 +46,21 @@ li {
 .icon-enodeb span {
 	background: url(icons/eNodeB.png) no-repeat;
 }
-
+.icon-hss span {
+	background: url(icons/HSS.png) no-repeat;
+}
 .icon-mme span {
 	background: url(icons/MME.png) no-repeat;
 }
+.icon-msc span {
+	background: url(icons/MSC.png) no-repeat;
+}
+.icon-pgw span {
+	background: url(icons/PGW.png) no-repeat;
+}
+.icon-default span {
+	background: url(icons/default.png) no-repeat;
+}
+.icon-ue span {
+	background: url(icons/ue.jpg) no-repeat;
+}*/

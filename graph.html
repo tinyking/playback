@@ -4,12 +4,81 @@
 		<meta charset="utf-8">
 		<title>Graph</title>
 		<link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+		<script type="text/javascript" src="jquery-easyui-1.4.4/jquery.min.js"></script>
 	</head>
+	<style media="screen">
+		table, tr, td{
+			text-align: center;
+		}
+		table span {
+			display: block;
+			width: 32px;
+			height: 32px;
+			margin: 0 auto;
+		}
+		td {
+			width: 120px;
+			padding-right: 120px;
+		}
+		table i {
+			display: block;
+			width: 2px;
+			background: #cacaca;
+			margin: 0 auto;
+			height: 1000px;
+		}
+		.icon-enodeb {
+			background: url(css/icons/eNodeB.png)
+		}
+		.line-layer {
+			float: left;
+		    position: absolute;
+			top: 100px;
+			bottom: 20px;
+			right: 10px;
+			left: 1px;
+			overflow: auto;
+			/*background: #ccc;*/
+		}
 
+		.line-box {
+			border-radius: 5px;
+			background: #ddd;
+			width: 230px;
+			cursor: pointer;
+			text-align: center;
+			margin: 8px 8px 8px 78px;
+		}
+		.line {
+			border-top: 1px #f00 solid;
+			height: 0px;
+		}
+
+		.triangle{
+			margin-top: -6px;
+			width:0;
+			height: 0;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+		}
+
+		.left{
+			border-right: 12px solid red;
+		}
+
+		.line-active {
+			border-top-width: px;
+		}
+
+		.dotted {
+			border-style: dotted;
+		}
+
+	</style>
 	<body>
-		<div class="graph">
-			<div class="back-layer">
-			<ul>
+		<div class="graph" style="overflow:hidden">
+			<div class="back-layer" style="overflow:hidden; z-index:1;width: 100000px;">
+			<!-- <ul>
 				<li>
 					<dl class="net-element icon-enodeb">
 						<dt>
@@ -19,12 +88,150 @@
 						<dd></dd>
 					</dl>
 				</li>
-			</ul>
+			</ul> -->
+
+			<table>
+				<tr><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td><td>eNodeB</td></tr>
+				<tr><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td><td><span class="icon-enodeb"></span></td></tr>
+				<tr><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td></tr>
+			</table>
 			</div>
 			<div class="line-layer">
-			line layer
+				<div class="boxs">
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active" >
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				<div class="line-box active">
+					<p class="time">1212122221</p>
+					<div class="line line-active">
+						<div class="triangle left"></div>
+					</div>
+					<p class="text">This is a text.</p>
+				</div>
+				</div>
 			</div>
 
 		</div>
+
+		<script type="text/javascript">
+		var baseWidth = 300;
+		var margin_left_diff = 243;
+			$(function() {
+				$('.line-layer .line-box').each(function(index) {
+					$(this).css('marginLeft', parseInt($(this).css('marginLeft')) + margin_left_diff * index);
+				});
+
+				var lastScrollLeft = 0;
+				$('.line-layer').scroll(function(event) {
+					/* Act on the event */
+					var _scrollLeft = $(this).scrollLeft();
+					if (lastScrollLeft != _scrollLeft) {
+						var back_layer = $('.back-layer');
+						$(back_layer).css('marginLeft', parseInt($(back_layer).css('marginLeft')) - (_scrollLeft - lastScrollLeft));
+						lastScrollLeft = _scrollLeft;
+					}
+				});
+
+				$('table tr:eq(0)').find('td').each(function(index) {
+					console.log($(this).text($(this).text() + index));
+				});
+
+			});
+		</script>
 	</body>
 </html>
