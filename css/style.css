@@ -1,0 +1,51 @@
+html,body {
+	height: 90%;
+	/*margin: 0;*/
+
+}
+li {
+	list-style-type: none;
+	background: #f00;
+	width: 200px;
+	min-height: 50px;
+}
+.graph, .back-layer{
+	height: 100%;
+	background: #eee;
+}
+/*.graph>.back-layer, .graph>.line-layer {
+
+}*/
+
+.net-element dl {
+	margin: 0 auto;
+}
+.net-element dt{
+	float:left;
+	width: 80px;
+	margin-left: 20px;
+	z-index: 1000;
+}
+.net-element dd {
+	width: 2px;
+	background: #cacaca;
+	position: absolute;
+	top: 60px;
+	bottom: 5px;
+	margin: 10px 34px;
+	float: left;
+}
+
+.net-element span {
+	width: 32px;
+	height: 32px;
+	display: block;
+}
+
+.icon-enodeb span {
+	background: url(icons/eNodeB.png) no-repeat;
+}
+
+.icon-mme span {
+	background: url(icons/MME.png) no-repeat;
+}
