@@ -427,117 +427,117 @@
       $('#edit').propertygrid('loadData', rows);
 
 
-      showFlowTree(data, 0);
-      refresh(data.packets[0].frame.value);
+    //   showFlowTree(data, 0);
+    //   refresh(data.packets[0].frame.value);
 
       PlayBack.init(data);
     });
 
-    function refresh(value) {
-      var rows = value.split('\n');
-      var lineNumber = $('.bottom-right .line-number').empty();
-      var hexDiv = $('.bottom-right .hex').empty(),
-        asciiDiv = $('.bottom-right .ascii').empty();
-
-      for (var i = 0, len = rows.length; i < len; i++) {
-        var hexRow = $('<div class="row" />'),
-          asciiRow = $('<div class="row" />');
-        hexDiv.append(hexRow), asciiDiv.append(asciiRow);
-
-        processRow(hexRow, asciiRow, rows[i]);
-        lineNumber.append($('<div class="row" />').append('<span>' + getRowNumString(i) + '</span>'));
-
-      }
-    }
-
-    function processRow(hexRow, asciiRow, value) {
-      var vals = value.split(' ');
-      for (var i = 0, len = vals.length; i < len; i++) {
-        hexRow.append('<span>' + vals[i] + '</span>');
-        asciiRow.append('<span>' + getAsciiCode(vals[i]) + '</span>');
-      }
-
-    }
-
-    /**
-     * 格式化行号
-     */
-    function getRowNumString(rowIndex) {
-      var hexRow = rowIndex.toString(16);
-      switch (hexRow.length) {
-        case 1:
-          return "00" + hexRow + "0";
-          break;
-        case 2:
-          return "0" + hexRow + "0";
-          break;
-        case 3:
-          return "" + hexRow + "0";
-          break;
-      }
-    }
-
-    function getAsciiCode(hexCode) {
-      //return "E";
-      var tenI = parseInt(hexCode, 16);
-      if (tenI <= 31 || tenI >= 127) {
-        return ".";
-      }
-      switch (tenI) {
-        case 32:
-          //SPACE
-          return "&nbsp;";
-        default:
-          return String.fromCharCode(tenI);
-      }
-    }
-
-    function showFlowTree(data, index) {
-      var treeData = [];
-      var protos = data.packets[index].protos;
-
-      var getChildren = function(index, proto) {
-        var children = [],
-          fields = proto.fields;
-        if (!fields) {
-          return children;
-        }
-        for (var i in fields) {
-          var field = fields[i];
-          var d = {
-            id: index + '_' + i,
-            text: field.showName
-          };
-          if (field.size) {
-            d.pos = field.pos;
-            d.size = field.size;
-          }
-          children.push(d);
-          d.children = getChildren(i, field);
-        }
-        return children;
-      };
-      for (var i in protos) {
-        var proto = protos[i];
-        var d = {
-          id: i,
-          text: proto.showName
-        };
-        if (proto.size) {
-          d.pos = proto.pos;
-          d.size = proto.size;
-        }
-        treeData.push(d);
-        d.children = getChildren(i, proto);
-      }
-
-      console.log(treeData);
-      $('#frameTree').tree({
-        data: treeData,
-        onClick: function(node) {
-          console.log(node.size);
-        }
-      });
+    // function refresh(value) {
+    //   var rows = value.split('\n');
+    //   var lineNumber = $('.bottom-right .line-number').empty();
+    //   var hexDiv = $('.bottom-right .hex').empty(),
+    //     asciiDiv = $('.bottom-right .ascii').empty();
+    //
+    //   for (var i = 0, len = rows.length; i < len; i++) {
+    //     var hexRow = $('<div class="row" />'),
+    //       asciiRow = $('<div class="row" />');
+    //     hexDiv.append(hexRow), asciiDiv.append(asciiRow);
+    //
+    //     processRow(hexRow, asciiRow, rows[i]);
+    //     lineNumber.append($('<div class="row" />').append('<span>' + getRowNumString(i) + '</span>'));
+    //
+    //   }
+    // }
+    //
+    // function processRow(hexRow, asciiRow, value) {
+    //   var vals = value.split(' ');
+    //   for (var i = 0, len = vals.length; i < len; i++) {
+    //     hexRow.append('<span>' + vals[i] + '</span>');
+    //     asciiRow.append('<span>' + getAsciiCode(vals[i]) + '</span>');
+    //   }
+    //
+    // }
+    //
+    // /**
+    //  * 格式化行号
+    //  */
+    // function getRowNumString(rowIndex) {
+    //   var hexRow = rowIndex.toString(16);
+    //   switch (hexRow.length) {
+    //     case 1:
+    //       return "00" + hexRow + "0";
+    //       break;
+    //     case 2:
+    //       return "0" + hexRow + "0";
+    //       break;
+    //     case 3:
+    //       return "" + hexRow + "0";
+    //       break;
+    //   }
+    // }
+    //
+    // function getAsciiCode(hexCode) {
+    //   //return "E";
+    //   var tenI = parseInt(hexCode, 16);
+    //   if (tenI <= 31 || tenI >= 127) {
+    //     return ".";
+    //   }
+    //   switch (tenI) {
+    //     case 32:
+    //       //SPACE
+    //       return "&nbsp;";
+    //     default:
+    //       return String.fromCharCode(tenI);
+    //   }
+    // }
+    //
+    // function showFlowTree(data, index) {
+    //   var treeData = [];
+    //   var protos = data.packets[index].protos;
+    //
+    //   var getChildren = function(index, proto) {
+    //     var children = [],
+    //       fields = proto.fields;
+    //     if (!fields) {
+    //       return children;
+    //     }
+    //     for (var i in fields) {
+    //       var field = fields[i];
+    //       var d = {
+    //         id: index + '_' + i,
+    //         text: field.showName
+    //       };
+    //       if (field.size) {
+    //         d.pos = field.pos;
+    //         d.size = field.size;
+    //       }
+    //       children.push(d);
+    //       d.children = getChildren(i, field);
+    //     }
+    //     return children;
+    //   };
+    //   for (var i in protos) {
+    //     var proto = protos[i];
+    //     var d = {
+    //       id: i,
+    //       text: proto.showName
+    //     };
+    //     if (proto.size) {
+    //       d.pos = proto.pos;
+    //       d.size = proto.size;
+    //     }
+    //     treeData.push(d);
+    //     d.children = getChildren(i, proto);
+    //   }
+    //
+    //   console.log(treeData);
+    //   $('#frameTree').tree({
+    //     data: treeData,
+    //     onClick: function(node) {
+    //       console.log(node.size);
+    //     }
+    //   });
 
 
       // var baseWidth = 300;
@@ -564,7 +564,7 @@
       //   console.log($(this).text($(this).text() + index));
       // });
 
-    }
+    // }
   </script>
 </body>
 
